@@ -1,0 +1,150 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>What is a putaway strategy? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Putaway &amp; Removal Strategies" href="../strategies.html" />
+    <link rel="next" title="How to store specific products to specific locations?" href="storage.html" />
+    <link rel="prev" title="Putaway &amp; Removal Strategies" href="../strategies.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../inventory.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              What is a putaway strategy?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../sales.html" class="internal reference">Sales</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">HRM</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="current toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#setting-up-a-strategy" class="ripple internal reference">Setting up a strategy</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/inventory/routes/strategies/putaway.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="what-is-a-putaway-strategy"></section><section id="overview"><h2 >Overview</h2><p >A good warehouse implementation takes care that products automatically
+move to their appropriate destination location. Putaway is the process
+of taking products off the receiving shipment and put them into the most
+appropriate location.</p><p >If for instance a warehouse contains volatile substances, it is
+important to make sure that certain products are not stored close to
+each other because of a potential chemical reaction.</p><p >A putaway strategy follows the same principle as removal strategies but
+affect on the destination location. Put away strategies are defined at
+the location level (unlike removal strategies which are defined at the
+product level).</p></section><section id="configuration"><h2 >Configuration</h2><p >Go to <span class="menuselection">Inventory ‣ Configuration ‣ Settings</span> and check option
+<strong >Manage several location per warehouse &amp; Advance routing of products using
+rules</strong>, then click on <strong >Apply</strong>.</p><img src="../../../_images/putaway01.png" class="img-responsive center-block"></section><section id="setting-up-a-strategy"><h2 >Setting up a strategy</h2><p >Let's take as an example a retail shop where we store vegetables and
+fruits.</p><p >We have to store this type of product in different locations to maintain
+product quality.</p><p >Suppose there is one warehouse location <strong >WH/Stock</strong> and there is
+sub location <strong >WH/Stock/Vegetables</strong> &amp; <strong >WH/Stock/Fruits</strong>.</p><p >You can create a putaway strategy from
+<span class="menuselection">Inventory ‣ Configuration ‣ Locations</span>.
+Open any location where you want to set a putaway strategy,
+click on <strong >Edit</strong> and locate the option <strong >Put Away Strategy</strong>.</p><img src="../../../_images/putaway02.png" class="img-responsive center-block"><p >Open the roll-down menu and click on <strong >Create and Edit</strong>. This will open a
+form view of put away strategy on which you have to set a name for the
+strategy, and set the method and fixed location for each category.</p><img src="../../../_images/putaway03.png" class="img-responsive center-block"><p >When you have entered all the necessary information, click on <strong >Save</strong>.</p><p >Now, when you will purchase products from those categories, they will
+automatically be transferred to the correct location.</p><p >To check current inventory, Go to
+<span class="menuselection">Inventory ‣ Inventory Control ‣ Current Inventory</span></p><p >There you can see current inventory by location.</p><img src="../../../_images/putaway04.png" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="storage.html" class="internal alert-link reference"><em >How to store specific products to specific locations?</em></a></li></ul></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

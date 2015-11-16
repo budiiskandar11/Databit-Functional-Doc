@@ -1,0 +1,153 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to unload your shipment to an input location? (2 steps) &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Incoming Shipments" href="../incoming.html" />
+    <link rel="next" title="How to add a quality control step in goods receipt? (3 steps)" href="three_steps.html" />
+    <link rel="prev" title="How to choose the right flow to handle receipts?" href="handle_receipts.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../inventory.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to unload your shipment to an input location? (2 steps)
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../sales.html" class="internal reference">Sales</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">HRM</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="current toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#use-advanced-routes" class="ripple internal reference">Use advanced routes</a></li><li class="list-group-item"><a href="#how-to-configure-your-warehouse" class="ripple internal reference">How to configure your warehouse ?</a></li></ul></li><li class="list-group-item"><a href="#how-to-receipt-a-shipment-in-2-steps" class="ripple internal reference">How to receipt a shipment in 2 steps?</a><ul ><li class="list-group-item"><a href="#how-to-process-the-receipt-step" class="ripple internal reference">How to process the Receipt step ?</a></li><li class="list-group-item"><a href="#how-to-to-transfer-the-receipt-to-your-stock" class="ripple internal reference">How to to transfer the receipt to your stock ?</a></li></ul></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/inventory/management/incoming/two_steps.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-unload-your-shipment-to-an-input-location-2-steps"></section><section id="overview"><h2 >Overview</h2><p >Odoo uses routes to define exactly how you will handle the different
+receipt steps. The configuration is done at the level of the warehouse.
+By default, the reception is a one step process, but changing the
+configuration can allow to have 2 or even 3 steps.</p><p >The 2 steps flow is the following : You receive the goods in an input
+area then transfer them from input area to your stock. As long as the
+goods are not transferred in your stock, they will not be available for
+further processing.</p><p >This is the case that will be explained in this document.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="use-advanced-routes"><h3 >Use advanced routes</h3><p >To allow management of routes, go to the menu
+<span class="menuselection">Inventory ‣ Configuration ‣ Settings</span></p><img src="../../../_images/two_steps051.png" class="img-responsive center-block"><p >Ensure that the routes option <strong >Advance routing of product using
+rules</strong> is checked, then click on <strong >Apply</strong> to save changes.</p><p >Make sure that <strong >“Manage several locations per warehouse”</strong> is also
+ticked.</p></section><section id="how-to-configure-your-warehouse"><h3 >How to configure your warehouse ?</h3><p >Go to the the menu <span class="menuselection">Inventory ‣ Configuration ‣ Warehouse</span>
+and choose the warehouse where you want to change reception methods.</p><p >By default, warehouses are configured with one step reception (option <strong >Receive
+goods directly into stock</strong>).</p><p >To add the control step, tick <strong >Unload in input location then go to
+stock (2 steps)</strong>.</p><img src="../../../_images/two_steps021.png" class="img-responsive center-block"></section><section id="how-to-receipt-a-shipment-in-2-steps"><h2 >How to receipt a shipment in 2 steps?</h2></section><section id="how-to-process-the-receipt-step"><h3 >How to process the Receipt step ?</h3><ul ><li >In the purchase module, create a <strong >Request for Quotation</strong>, then click on
+the <strong >Confirm order</strong> button. You can see that there is one
+<strong >Shipment</strong> related to purchase order in the <strong >stat button</strong>
+above the purchase order form view. This is the receipt step.</li></ul><img src="../../../_images/two_steps031.png" class="img-responsive center-block"><ul ><li >Go to <strong >Inventory</strong> and click on the <strong ># TO RECEIVE</strong> link on the
+<strong >Receipts</strong> card.</li></ul><img src="../../../_images/two_steps011.png" class="img-responsive center-block"><p >Click on the receipt that you want to process, then click on <strong >Validate</strong> to
+complete the move from the <strong >Vendor</strong> to <strong >WH/Input</strong>.</p><p >This has completed the Receipt Step and the move refered with <strong >WH/IN</strong>.
+The product has been moved from the <strong >Vendor</strong> to the <strong >WH/Input</strong> location,
+which makes the product available for the next step.</p></section><section id="how-to-to-transfer-the-receipt-to-your-stock"><h3 >How to to transfer the receipt to your stock ?</h3><p >Go back to the <strong >Inventory</strong> dashboard. The waiting transfer is now
+ready. Click on the <strong ># TRANSFERS</strong> in the <strong >Internal Transfers</strong> to process
+the quality control.</p><img src="../../../_images/two_steps041.png" class="img-responsive center-block"><p >Click on the picking you want to process. Click on <strong >Validate</strong> to
+complete the move from <strong >WH/Input</strong> to <strong >WH/Stock</strong>.</p><p >This has completed the internal transfer step and the move refered with <strong >WH/INT</strong>.
+The receipt has been moved to your stock.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="../delivery/inventory_flow.html" class="internal alert-link reference"><em >How to choose the right inventory flow to handle delivery orders?</em></a></li><li ><a href="three_steps.html" class="internal alert-link reference"><em >How to add a quality control step in goods receipt? (3 steps)</em></a></li></ul></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

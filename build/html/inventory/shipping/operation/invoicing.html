@@ -1,0 +1,145 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to invoice the shipping cost to the customer? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Shipping Operations" href="../operation.html" />
+    <link rel="next" title="How to manage multiple packs for the same delivery order?" href="multipack.html" />
+    <link rel="prev" title="Shipping Operations" href="../operation.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../inventory.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to invoice the shipping cost to the customer?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../sales.html" class="internal reference">Sales</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">HRM</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="current toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#how-to-invoice-the-shipping-costs-to-the-customer" class="ripple internal reference">How to invoice the shipping costs to the customer?</a><ul ><li class="list-group-item"><a href="#invoice-the-price-set-on-the-sale-order" class="ripple internal reference">Invoice the price set on the sale order</a></li><li class="list-group-item"><a href="#invoice-the-real-shipping-costs" class="ripple internal reference">Invoice the real shipping costs</a></li></ul></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/inventory/shipping/operation/invoicing.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-invoice-the-shipping-cost-to-the-customer"></section><section id="overview"><h2 >Overview</h2><p >There are two ways to invoice the shipping costs:</p><ol ><li >Agree with the customer over a cost and seal it down in the sale
+order</li><li >Invoice the real cost of the shipping.</li></ol></section><section id="configuration"><h2 >Configuration</h2><p >To configure the price of your delivery methods, go to the <strong >Inventory</strong>
+app, click on <span class="menuselection">Configuration ‣ Delivery ‣ Delivery Methods</span>.</p><p >You can manually set a price for the shipping: It can be fixed or based
+on rules.</p><p >Or you can use the transportation company computation system. Read the
+document <a href="../setup/third_party_shipper.html" class="internal reference"><em >How to integrate a third party shipper?</em></a></p></section><section id="how-to-invoice-the-shipping-costs-to-the-customer"><h2 >How to invoice the shipping costs to the customer?</h2></section><section id="invoice-the-price-set-on-the-sale-order"><h3 >Invoice the price set on the sale order</h3><p >On your sale order, choose the carrier that will be used. Click on
+<strong >Delivery Method</strong> to choose the right one.</p><img src="../../../_images/invoicing06.png" class="img-responsive center-block"><p >The price is computed when you <strong >save</strong> the sale order or when you click on
+<strong >Set price</strong>.</p><p >To invoice the price of the delivery charge on the sale order, click on
+<strong >Set price</strong>, it will add a line with the name of the delivery method as
+a product. It may vary from the real price.</p><p >When you create the invoice, it will take the price set on the sale
+order.</p><img src="../../../_images/invoicing01.png" class="img-responsive center-block"></section><section id="invoice-the-real-shipping-costs"><h3 >Invoice the real shipping costs</h3><p >On your sale order, choose the carrier that will be used. Click on
+<strong >Delivery Method</strong> to choose the right one.</p><img src="../../../_images/invoicing05.png" class="img-responsive center-block"><p >The price is computed when you <strong >save</strong> the sale order. Confirm the sale
+order and proceed to deliver the product.</p><p >The real shipping cost are computed when the delivery order is
+validated.</p><img src="../../../_images/invoicing02.png" class="img-responsive center-block"><p >Go back to the sale order, the real cost is now added to the sale
+order.</p><img src="../../../_images/invoicing03.png" class="img-responsive center-block"><p >When you create the invoice, it will take the price computed by the
+carrier.</p><img src="../../../_images/invoicing04.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you split the delivery and make several ones, each delivery
+order will add a line to the sale order.</p></div><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="../setup/third_party_shipper.html" class="internal alert-link reference"><em >How to integrate a third party shipper?</em></a></li><li ><a href="labels.html" class="internal alert-link reference"><em >How to print shipping labels?</em></a></li></ul></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

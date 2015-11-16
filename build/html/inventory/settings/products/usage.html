@@ -1,0 +1,143 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>When should you use packages, units of measure or kits? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Products" href="../products.html" />
+    <link rel="next" title="How to use packages?" href="packages.html" />
+    <link rel="prev" title="Using product variants" href="variants.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../inventory.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              When should you use packages, units of measure or kits?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../sales.html" class="internal reference">Sales</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">HRM</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="current toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#unit-of-measures" class="ripple internal reference">Unit of measures</a></li><li class="list-group-item"><a href="#packages" class="ripple internal reference">Packages</a></li><li class="list-group-item"><a href="#packaging" class="ripple internal reference">Packaging</a></li><li class="list-group-item"><a href="#when-to-use-packages-packagings-or-unit-of-measures" class="ripple internal reference">When to use packages, packagings or unit of measures ?</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/inventory/settings/products/usage.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="when-should-you-use-packages-units-of-measure-or-kits"></section><section id="unit-of-measures"><h2 >Unit of measures</h2><p >Units of measures are an indication about the unit used to handle a
+product. Products can be expressed in multiple units of measure at once.</p><p >Activate this option if you are working with several ones in your
+warehouse.</p><p >The purchase unit of measure might be different that the one you use in
+your warehouse.</p><p >The selling unit of measure is set on the sale order and can be
+different.</p><img src="../../../_images/usage011.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >The conversion between the different units of measures is done
+automatically. The only condition is that all the units have to be in
+the same category (Unit, Weight, Volume, Length,...)</p></div></section><section id="packages"><h2 >Packages</h2><p >The package is the physical container in which you put one or several
+product.</p><img src="../../../_images/usage021.png" class="img-responsive center-block"></section><section id="packaging"><h2 >Packaging</h2><p >Packaging is the physical container that protects your product.</p><p >If you are selling computers, the packaging contains the computer with
+the notice and the power plug.</p><p >In Odoo, packagings are just used for indicative purpose.</p><img src="../../../_images/usage031.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >You can define on the <strong >Packages</strong> which <strong >Packaging</strong> it uses. But it is
+only for indicative purpose.</p></div></section><section id="when-to-use-packages-packagings-or-unit-of-measures"><h2 >When to use packages, packagings or unit of measures ?</h2><p >For example, you are sellings eggs. In your warehouse, you manage the
+eggs individually. Lots of eggs are scrapped and you do it egg by egg.
+The <strong >unit of measure</strong> is <code >Unit(s)</code>.</p><p >If you are selling eggs by the dozen, the selling <strong >unit of measure</strong> is
+the <code >Dozen</code>. You will set it on your sale order.</p><p >The <code >cardboard trays</code> that contains the dozen of eggs is the <strong >packaging</strong>.</p><p >When you are selling several trays, you might wrap all the trays into a
+<code >box</code> or in a <code >plastic</code> wrapping. It is the <strong >package</strong>.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="../../overview/start/setup.html" class="internal alert-link reference"><em >How to setup Odoo inventory?</em></a></li><li ><a href="uom.html" class="internal alert-link reference"><em >How to use different units of measure?</em></a></li><li ><a href="packages.html" class="internal alert-link reference"><em >How to use packages?</em></a></li></ul></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to manage multiple packs for the same delivery order? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Shipping Operations" href="../operation.html" />
+    <link rel="next" title="How to print shipping labels?" href="labels.html" />
+    <link rel="prev" title="How to invoice the shipping cost to the customer?" href="invoicing.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../inventory.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to manage multiple packs for the same delivery order?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../sales.html" class="internal reference">Sales</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">HRM</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="current toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#sale-process" class="ripple internal reference">Sale process</a><ul ><li class="list-group-item"><a href="#sale-order" class="ripple internal reference">Sale order</a></li><li class="list-group-item"><a href="#multi-packages-delivery" class="ripple internal reference">Multi-packages Delivery</a></li><li class="list-group-item"><a href="#multi-packages-with-a-3rd-party-shipper" class="ripple internal reference">Multi-packages with a 3rd party-shipper</a></li></ul></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/inventory/shipping/operation/multipack.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-manage-multiple-packs-for-the-same-delivery-order"></section><section id="overview"><h2 >Overview</h2><p >By default, Odoo considers that your delivery is composed of one
+package. But you can easily ship your deliveries with more than one
+package. It is fully integrated with the third-party shippers.</p></section><section id="configuration"><h2 >Configuration</h2><p >To configure the use of packages, go to the menu
+<span class="menuselection">Inventory ‣ Configuration ‣ Settings</span>.
+Locate the <strong >Packages</strong> section and tick <strong >Record
+packages used on packing: pallets, boxes,...</strong></p><img src="../../../_images/multipack03.png" class="img-responsive center-block"><p >Click on <strong >Apply</strong> when you are done.</p></section><section id="sale-process"><h2 >Sale process</h2></section><section id="sale-order"><h3 >Sale order</h3><img src="../../../_images/multipack06.png" class="img-responsive center-block"><p >Click on a <strong >Delivery Method</strong> to choose the right one.</p><p >The price is computed when you <strong >save</strong> the sale order or when you click on
+<strong >Set price</strong>.</p></section><section id="multi-packages-delivery"><h3 >Multi-packages Delivery</h3><p >The delivery created from the sale order will take the shipping
+information from it.</p><img src="../../../_images/multipack07.png" class="img-responsive center-block"><p >From here, you can split your delivery into multiple packages.</p><p >Choose the quantity you want to put in the first pack in the <strong >Done</strong>
+column, then click on the link <strong >Put in Pack</strong>.</p><img src="../../../_images/multipack02.png" class="img-responsive center-block"><p >It will automatically create a pack with the requested quantity.</p><p >Do the same steps for the other pieces you want to pack in.</p><img src="../../../_images/multipack04.png" class="img-responsive center-block"><p >Click on <strong >Validate</strong> when you are done.</p></section><section id="multi-packages-with-a-3rd-party-shipper"><h3 >Multi-packages with a 3rd party-shipper</h3><p >Once the delivery order is validated, you will receive the tracking
+number. The <strong >carrier Tracking ref</strong> field will automatically be filled.
+Click on the <strong >Tracking</strong> button to check your delivery on the provider
+website.</p><img src="../../../_images/multipack05.png" class="img-responsive center-block"><p >The <strong >labels</strong> to stick on your packages are available in the history
+underneath:</p><img src="../../../_images/multipack01.png" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="invoicing.html" class="internal alert-link reference"><em >How to invoice the shipping cost to the customer?</em></a></li><li ><a href="labels.html" class="internal alert-link reference"><em >How to print shipping labels?</em></a></li></ul></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

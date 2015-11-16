@@ -1,0 +1,164 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to do a year end in Odoo? (close a fiscal year) &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Adviser" href="../adviser.html" />
+    <link rel="next" title="How to manage a financial budget?" href="budget.html" />
+    <link rel="prev" title="Manage your fixed assets" href="assets.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../accounting.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to do a year end in Odoo? (close a fiscal year)
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="current toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../sales.html" class="internal reference">Sales</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">HRM</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#year-end-checklist" class="ripple internal reference">Year-end checklist</a></li><li class="list-group-item"><a href="#closing-the-fiscal-year" class="ripple internal reference">Closing the fiscal year</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/accounting/others/adviser/fiscalyear.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-do-a-year-end-in-odoo-close-a-fiscal-year"><p >Before going ahead with closing a fiscal year, there are a few steps one
+should typically take to ensure that your accounting is correct, up to
+date, and accurate:</p><ul ><li >Make sure you have fully reconciled your <strong >bank account(s)</strong> up to
+year end and confirm that your ending book balances agree with
+your bank statement balances.</li><li >Verify that all <strong >customer invoices</strong> have been entered and approved.</li><li >Confirm that you have entered and agreed all <strong >vendor bills</strong>.</li><li >Validate all <strong >expenses</strong>, ensuring their accuracy.</li><li >Corroborate that all <strong >received payments</strong> have been entered and
+recorded accurately.</li></ul></section><section id="year-end-checklist"><h2 >Year-end checklist</h2><ul ><li >Run a <strong >Tax report</strong>, and verify that your tax information is correct.</li><li ><p >Reconcile all accounts on your <strong >Balance Sheet</strong>:</p><ul ><li >Agree your bank balances in Odoo against your actual bank balances
+on your statements. Utilize the <strong >Bank Reconciliation</strong> report to
+assist with this.</li><li >Reconcile all transactions in your cash and bank accounts by
+running your <strong >Aged Receivables</strong> and <strong >Aged Payables</strong> reports.</li><li >Audit your accounts, being sure to fully understand the
+transactions affecting them and the nature of the
+transactions, making sure to include loans and fixed assets.</li></ul></li><li >Run the optional <strong >Payments Matching</strong> feature, under the <strong >More</strong>
+dropdown on the dashboard, validating any open <strong >Vendor Bills</strong> and
+<strong >Customer Invoices</strong> with their payments. This step is optional,
+however it may assist the year-end process if all outstanding
+payments and invoices are reconciled, and could lead finding
+errors or mistakes in the system.</li><li ><p >Your accountant/bookkeeper will likely verify your balance sheet
+items and book entries for:</p><ul ><li >Year-end manual adjustments, using the <strong >Adviser Journal Entries</strong>
+menu (For example, the <strong >Current Year Earnings</strong> and <strong >Retained
+Earnings</strong> reports).</li><li ><strong >Work in Progress</strong>.</li><li ><strong >Depreciation Journal Entries</strong>.</li><li ><strong >Loans</strong>.</li><li ><strong >Tax adjustments</strong>.</li></ul></li></ul><p >If your accountant/bookkeeper is going through end of the year auditing,
+they may want to have paper copies of all balance sheet items (such as
+loans, bank accounts, prepayments, sales tax statements, etc...) to
+agree these against your Odoo balances.</p><p >During this process, it is good practice to set the <strong >Lock date for
+Non-Advisers</strong> to the last day of the preceding financial year, which is
+set under the accounting configuration. This way, the accountant can be
+confident that nobody is changing the previous year transactions
+while auditing the books.</p><img src="../../../_images/fiscalyear01.png" class="img-responsive center-block"></section><section id="closing-the-fiscal-year"><h2 >Closing the fiscal year</h2><p >In Odoo there is no need to do a specific year end closing entry in order to
+close out income statement accounts. The reports are created in
+real-time, meaning that the <strong >Income statement</strong> corresponds directly with
+the year-end date you specify in Odoo. Therefore, any time you generate
+the <strong >Income Statement</strong>, the beginning date will correspond with the
+beginning of the <strong >Fiscal Year</strong> and the account balances will all be 0.</p><p >Once the accountant/bookkeeper has created the journal entry to allocate
+the <strong >Current Year Earnings</strong>, you should set the <strong >Lock Date</strong> to the last day
+of the fiscal year. Making sure that before doing so, you confirm
+whether or not the current year earnings in the <strong >Balance Sheet</strong> is
+correctly reporting a 0 balance.</p></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

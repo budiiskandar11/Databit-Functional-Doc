@@ -1,0 +1,151 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Use cases in the bank reconciliation process? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Bank Reconciliation" href="../reconciliation.html" />
+    <link rel="next" title="Configure model of entries" href="configure.html" />
+    <link rel="prev" title="Bank Reconciliation" href="../reconciliation.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../accounting.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              Use cases in the bank reconciliation process?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="current toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../sales.html" class="internal reference">Sales</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">HRM</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#user-cases" class="ripple internal reference">User cases</a><ul ><li class="list-group-item"><a href="#case-1-payments-registration" class="ripple internal reference">Case 1: Payments registration</a></li><li class="list-group-item"><a href="#case-2-bank-statements-reconciliations" class="ripple internal reference">Case 2: Bank statements reconciliations</a></li></ul></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/accounting/bank/reconciliation/use_cases.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="use-cases-in-the-bank-reconciliation-process"></section><section id="overview"><h2 >Overview</h2><p >Linking your bank statements with your accounting can be a lot of work.
+You need to find invoices back, relate payments and that amount of
+administration can cast a lot of time. Luckily, with Odoo you can very
+easily link your invoices or any other payment with your bank
+statements.</p><p >Two reconciliation processes exist in Odoo.</p><ol ><li >We can directly register a payment on the invoices</li><li >We can reconcile open invoices with bank statements</li></ol></section><section id="configuration"><h2 >Configuration</h2><p >No special configuration is necessary to register invoices. All we need
+to do is install the accounting app.</p><img src="../../../_images/use01.png" class="img-responsive center-block"></section><section id="user-cases"><h2 >User cases</h2></section><section id="case-1-payments-registration"><h3 >Case 1: Payments registration</h3><p >We received the payment proof for our invoice of 2100 euros issued to
+Smith &amp; Co.</p><p >We start at our issued Invoice of 2100 euros for Smith &amp; Co. Because the
+sold product is a service we demand an immediate payment. Our accountant
+only handles the bank statements at the end of week, so we have to mark
+the invoice as paid so we can remember we can start the service with our
+customer.</p><p >Our customer send us a payment confirmation. We can thus register a
+payment and mark the invoice as paid.</p><img src="../../../_images/use02.png" class="img-responsive center-block"><p >By clicking on <strong >register payment,</strong> we are telling Odoo that our
+customer paid the Invoice. We thus have to specify the amount and the
+payment method</p><img src="../../../_images/use03.png" class="img-responsive center-block"><p >We can always find the payment back from the Invoice by clicking on the
+<span class="menuselection">Info ‣ Open Payment</span>.</p><img src="../../../_images/use04.png" class="img-responsive center-block"><p >The invoice has been paid and <strong >the reconciliation has been done
+automatically.</strong></p></section><section id="case-2-bank-statements-reconciliations"><h3 >Case 2: Bank statements reconciliations</h3><p >We start at our issued Invoice of 3000 euros for Smith &amp; Co. Let's also
+assume that other Invoices are open for different customers.</p><img src="../../../_images/use05.png" class="img-responsive center-block"><p >We receive our bank statement and not only the invoice of Smith &amp; Co has
+been paid, the one of Buzz of 92 euros as well.</p><p ><strong >Import</strong> or <strong >Create</strong> the bank statements. Please refer to the
+documents from the Bank Feeds section.</p><img src="../../../_images/use06.png" class="img-responsive center-block"><p >On the dashboard, click on <strong >Reconcile # Items</strong></p><img src="../../../_images/use07.png" class="img-responsive center-block"><p >If everything was right (correct partner name, right amount) odoo will
+do the reconciliations <strong >automatically</strong>.</p><img src="../../../_images/use08.png" class="img-responsive center-block"><p >If some issues are found, you will need to take <strong >manual actions</strong>.</p><p >For example, if the partner is missing from your bank statement, just
+fill it in :</p><img src="../../../_images/use09.png" class="img-responsive center-block"><p >If the payment is done with a down payment, just check if it is all
+right and validate all related payments :</p><img src="../../../_images/use10.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >Hit CTRL-Enter to reconcile all the balanced items in the sheet.</p></div><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="../feeds/ofx.html" class="internal alert-link reference"><em >Import OFX statement files</em></a></li><li ><a href="../feeds/synchronize.html" class="internal alert-link reference"><em >How to synchronize Odoo with your bank?</em></a></li><li ><a href="../feeds/manual.html" class="internal alert-link reference"><em >Register bank statements manually</em></a></li></ul></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

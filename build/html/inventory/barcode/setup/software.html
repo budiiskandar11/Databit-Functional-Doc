@@ -1,0 +1,154 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to activate the barcodes in Odoo? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Setup" href="../setup.html" />
+    <link rel="next" title="Daily Operations" href="../operations.html" />
+    <link rel="prev" title="Set up your barcode scanner" href="hardware.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../inventory.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to activate the barcodes in Odoo?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../sales.html" class="internal reference">Sales</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">HRM</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="current toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#set-products-barcodes" class="ripple internal reference">Set products barcodes</a></li><li class="list-group-item"><a href="#set-locations-barcodes" class="ripple internal reference">Set locations barcodes</a></li><li class="list-group-item"><a href="#barcode-formats" class="ripple internal reference">Barcode formats</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/inventory/barcode/setup/software.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-activate-the-barcodes-in-odoo"><p >The barcode scanning features can save you a lot of the time usually
+lost switching between the keyboard, the mouse and the scanner. Properly
+attributing barcodes to products, pickings locations, etc. allows you to
+work more efficiently by controlling the software almost exclusively
+with the barcode scanner.</p></section><section id="set-products-barcodes"><h2 >Set products barcodes</h2><img src="../../../_images/software01.png" class="img-responsive center-block"><p >In order to fill a picking or to perform an inventory, you need to make
+sure that your products are encoded in Odoo along with their barcodes.
+If this is not already done, you can fill in the products barcodes
+through a handy interface. Go to
+<span class="menuselection">Inventory ‣ Configuration ‣ Settings</span>
+and click the <strong >Configure Product Barcodes</strong> button. This
+interface can also be accessed via the planner.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Product variants: be careful to add barcodes directly on the
+variant, and not the template product (otherwise you won't be able to
+differentiate them).</p></div></section><section id="set-locations-barcodes"><h2 >Set locations barcodes</h2><img src="../../../_images/software02.png" class="img-responsive center-block"><p >If you manage multiple locations, you will find useful to attribute a
+barcode to each location and stick it on the location. You can configure
+the locations barcodes in
+<span class="menuselection">Inventory ‣ Configuration ‣ Warehouse Management ‣ Locations</span>.
+There is button in the <strong >Print</strong> menu that you
+can use to print the locations names and barcodes. There are 4 barcodes
+per page, arranged in a way that is convenient to print on sticker
+paper.</p><p >Example of location naming: <strong >warehouse short name</strong> - <strong >location short
+name</strong> - (<strong >Corridor X</strong> - <strong >Shelf Y</strong> - <strong >Height Z</strong>) Example: A032-025-133</p><img src="../../../_images/software03.png" class="img-responsive center-block"></section><section id="barcode-formats"><h2 >Barcode formats</h2><p >Most retail products use EAN-13 barcodes. They cannot be made up without
+proper authorization: you must pay the International Article Numbering
+Association a fee in exchange for an EAN code sequence (that's why no
+two products in a store will ever have the same EAN code).</p><p >Still, as Odoo supports any string as a barcode, so you can always
+define your own barcode format for internal use.</p></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

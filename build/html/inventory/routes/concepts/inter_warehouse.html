@@ -1,0 +1,169 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to do inter-warehouses transfers? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Concepts" href="../concepts.html" />
+    <link rel="next" title="How to organize a cross-dock in your warehouse?" href="cross_dock.html" />
+    <link rel="prev" title="What is a push rule?" href="push_rule.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../inventory.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to do inter-warehouses transfers?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../sales.html" class="internal reference">Sales</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">HRM</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="current toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#creating-a-new-warehouse" class="ripple internal reference">Creating a new warehouse</a></li><li class="list-group-item"><a href="#creating-a-new-inventory" class="ripple internal reference">Creating a new inventory</a></li><li class="list-group-item"><a href="#create-an-internal-transfer" class="ripple internal reference">Create an internal transfer</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/inventory/routes/concepts/inter_warehouse.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-do-inter-warehouses-transfers"><p >If you own different warehouses you might want to transfer goods from
+one warehouse to the other. This is very easy thanks to the inventory
+application in Odoo.</p></section><section id="configuration"><h2 >Configuration</h2><p >First of all you have to select the multi locations option. Go to
+<span class="menuselection">Configuration ‣ Settings</span> in the <strong >Inventory application</strong>.
+Then tick the <strong >Manage several locations per
+warehouse</strong> option. Please don't forget to <strong >apply</strong> your changes.</p><img src="../../../_images/inter01.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >This option should also be ticked if you wish to manage different
+locations and routes in your warehouse.</p></div></section><section id="creating-a-new-warehouse"><h2 >Creating a new warehouse</h2><p >The next step is to create your new warehouse. In the Inventory application
+click on <span class="menuselection">Configuration ‣ Warehouse Management ‣
+Warehouses</span>. You are now able to create your warehouse by clicking on
+<strong >Create</strong>.</p><p >Fill in a <strong >Warehouse Name</strong> and a <strong >Short Name</strong>. The short name is 5
+characters maximum.</p><img src="../../../_images/inter02.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >please note that the <strong >Short Name</strong> is very important as it will
+appear on your transfer orders and other warehouse documents. It might
+be smart to use an understandable one (e.g.: WH/[first letters of
+location]).</p></div><p >If you go back to your dashboard, new operations will automatically have
+been generated for your new warehouse.</p><img src="../../../_images/inter03.png" class="img-responsive center-block"></section><section id="creating-a-new-inventory"><h2 >Creating a new inventory</h2><p >If you create a new warehouse you might already have an existing
+physical inventory in it. In that case you should create an inventory in
+Odoo, if not you can skip this step.</p><p >Go into the inventory application, select <span class="menuselection">Inventory Control ‣
+Inventory Adjustment</span>. You can then create a new inventory by clicking on
+<strong >Create</strong>. Fill in the <strong >Inventory Reference</strong>, <strong >Date</strong>
+and be sure to select the right warehouse and location.</p><img src="../../../_images/inter04.png" class="img-responsive center-block"><p >Next, click on <strong >Start Inventory</strong>. A new window will open where you will
+be able to input your existing products. Select add an item and indicate
+the <strong >Real Quantity</strong> available in the warehouse. The theoretical quantity
+can not be changed as it represents a computed quantity from purchase
+and sales orders.</p><img src="../../../_images/inter05.png" class="img-responsive center-block"><p >Don't forget to validate your inventory once you have recorder the state of
+all yours product.</p></section><section id="create-an-internal-transfer"><h2 >Create an internal transfer</h2><p >The final step is to create your internal transfer. If you want to
+tranfer 2 units of a product from your first warehouse to another one in
+Brussels, proceed as follows:</p><p >From your dashboard, select a internal movement of one of the two
+warehouses. To do so, click on <span class="menuselection">More  ‣ Transfer</span>.</p><img src="../../../_images/inter06.png" class="img-responsive center-block"><p >A new window will open where you will be able to select the source
+location zone (in this case our &quot;old warehouse&quot;) and the destination
+location zone (in this case our &quot;new&quot; warehouse located in Brussels).</p><p >Add the products you want to transfer by clicking on <strong >Add an Item</strong> and
+don't forget to <strong >Validate</strong> or <strong >Mark as TODO</strong> once you are done.</p><img src="../../../_images/inter07.png" class="img-responsive center-block"><p >If you select <strong >Validate</strong>, Odoo will process all quantities to transfer.</p><p >If you select <strong >Mark as TODO</strong>, Odoo will put the transfer in <strong >Waiting
+Availability</strong> status. Click on <strong >Reserve</strong> to reserve the amount of
+products in your source warehouse.</p><p >It is also possible to manually transfer each product:</p><ol ><li ><p >Via your dashboard, select the transfer order in the source location.</p><img src="../../../_images/inter08.png" class="img-responsive center-block"></li><li ><p >Select the right transfer order</p><img src="../../../_images/inter09.png" class="img-responsive center-block"></li></ol><p >3. Click on the little pencil logo in the lower right
+corner in order to open the operation details window. In this new
+window you can manually indicate how much products you process</p><img src="../../../_images/inter10.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >If you decide to partially process the transfer order (e.g. a part of the
+products can't be shipped yet due to an unexpected event), Odoo will
+automatically ask if you wish to create a <strong >backorder</strong>.
+Create a backorder if you expect to process the remaining products
+later, do not create a backorder if you will not supply/receive the
+remaining products.</p></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

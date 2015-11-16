@@ -1,0 +1,153 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to scrap products? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Miscellaneous Operations" href="../misc.html" />
+    <link rel="next" title="How to manage stock that you don&#39;t own?" href="owned_stock.html" />
+    <link rel="prev" title="Miscellaneous Operations" href="../misc.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../inventory.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to scrap products?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../sales.html" class="internal reference">Sales</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">HRM</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="current toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#different-ways-to-scrap-product" class="ripple internal reference">Different ways to scrap product</a><ul ><li class="list-group-item"><a href="#scrap-from-receipt-initial-demand-tab" class="ripple internal reference">1) Scrap from Receipt (Initial Demand tab).</a></li><li class="list-group-item"><a href="#scrap-from-delivery-order-initial-demand-tab" class="ripple internal reference">2) Scrap from delivery order (Initial Demand tab) .</a></li><li class="list-group-item"><a href="#scrap-from-internal-transfer-initial-demand-tab" class="ripple internal reference">3) Scrap from internal transfer (Initial Demand tab).</a></li></ul></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/inventory/management/misc/scrap.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-scrap-products"></section><section id="overview"><h2 >Overview</h2><p >Scrap means waste that either has no economic value or only the value of
+its basic material</p><p >content recoverable through recycling.</p><p >In your warehouse you sometimes find products that are damaged or that
+are unusable due to expiry or for some other reason. You often notice
+this during picking or physical inventory.</p><p >Since you cannot normally sell or store these products, you have to
+scrap product.</p><p >When goods are scrapped they are not reflected in the system as a part
+of the inventory. The scrapped material will be physically moved to
+scrap area.</p></section><section id="configuration"><h2 >Configuration</h2><p >When you install inventory management, odoo automatically creates one
+default scrap location, namely <strong >Virtual location/Scrapped</strong>.</p><p >To create an extra scrap location, Go to
+<span class="menuselection">Inventory ‣ Configuration ‣ Setting</span>
+and check <strong >Manage several locations per warehouse</strong>,
+then click on <strong >Apply</strong>.</p><img src="../../../_images/scrap06.png" class="img-responsive center-block"><p >After applying <strong >Manage several location per warehouse</strong>, you can create
+a new scrap location in
+<span class="menuselection">Configuration ‣ Warehouse Management ‣ Locations.</span></p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >To define a scrap location, you have to check <strong >Is a Scrap Location?</strong>
+on location form view.</p></div></section><section id="different-ways-to-scrap-product"><h2 >Different ways to scrap product</h2><p >Odoo provides several ways to scrap products.</p></section><section id="scrap-from-receipt-initial-demand-tab"><h3 >1) Scrap from Receipt (Initial Demand tab).</h3><p >To scrap product from incoming shipment, Go to
+<span class="menuselection">Inventory ‣ Dashboard ‣ Receipts</span>.</p><img src="../../../_images/scrap08.png" class="img-responsive center-block"><p >Open the incoming shipment, and in the <strong >Initial demand</strong> tab, click on the
+scrap products button.</p><img src="../../../_images/scrap01.png" class="img-responsive center-block"></section><section id="scrap-from-delivery-order-initial-demand-tab"><h3 >2) Scrap from delivery order (Initial Demand tab) .</h3><p >To scrap product from outgoing shipment, Go to
+<span class="menuselection">Inventory ‣ Dashboard ‣ Delivery Orders</span></p><img src="../../../_images/scrap07.png" class="img-responsive center-block"><p >Open the outgoing shipment, and in the <strong >Initial demand</strong> tab, click on the
+scrap products button on stock move in initial demand tab.</p><img src="../../../_images/scrap03.png" class="img-responsive center-block"></section><section id="scrap-from-internal-transfer-initial-demand-tab"><h3 >3) Scrap from internal transfer (Initial Demand tab).</h3><p >To scrap product from internal transfer, Go to
+<span class="menuselection">Inventory ‣ Dashboard ‣ Receipts</span></p><img src="../../../_images/scrap05.png" class="img-responsive center-block"><p >Open the internal transfer, and in the <strong >Initial demand</strong> tab, click on the
+scrap products button on stock move in initial demand tab.</p><img src="../../../_images/scrap02.png" class="img-responsive center-block"><p >When you click on scrap button, a popup will open. You can enter the
+quantity of products, and specify the scrap location, then click on
+<strong >Scrap</strong>.</p><img src="../../../_images/scrap04.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >To allow change scrap location on wizard, you have to select
+<strong >Manage several location per warehouse</strong> in the settings at
+<span class="menuselection">Inventory ‣ Configuration ‣ Setting</span></p></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,1769 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Odoo S.A.
+# This file is distributed under the same license as the Odoo Business package.
+# 
+# Translators:
+# Alejandra Escandón Del Real <alejandra.escandon@jarsa.com.mx>, 2015
+# Rojas Pablo <rojaspablo88@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo 9.0 Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-10 08:54+0100\n"
+"PO-Revision-Date: 2015-11-11 15:56+0000\n"
+"Last-Translator: Alejandra Escandón Del Real <alejandra.escandon@jarsa.com.mx>\n"
+"Language-Team: Spanish (http://www.transifex.com/odoo/odoo-9-doc/language/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../crm.rst:5
+msgid "CRM"
+msgstr "CRM"
+
+#: ../../crm/leads.rst:3
+msgid "Leads"
+msgstr "Iniciativas"
+
+#: ../../crm/leads/generate.rst:3
+msgid "Generate leads"
+msgstr "Generar iniciativas"
+
+#: ../../crm/leads/generate/emails.rst:3
+msgid "How to generate leads from incoming emails?"
+msgstr "¿Cómo generar iniciativas desde correos entrantes?"
+
+#: ../../crm/leads/generate/emails.rst:5
+msgid ""
+"There are several ways for your company to :doc:`generate leads with Odoo "
+"CRM <manual>`. One of them is using your company's generic email address as "
+"a trigger to create a new lead in the system. In Odoo, each one of your "
+"sales teams is linked to its own email address from which prospects can "
+"reach them. For example, if the personal email address of your Direct team "
+"is **direct@mycompany.example.com**, every email sent will automatically "
+"create a new opportunity into the sales team."
+msgstr "Hay varias maneras para que su empresa pueda :doc:`generar clientes potenciales con Odoo CRM <manual>`. Uno de ellos es el uso de correo electrónico genérico de su empresa como un disparador para crear una nueva pista en el sistema. En Odoo, cada uno de sus equipos de ventas está vinculado a su propia dirección de correo electrónico desde que las perspectivas pueden llegar a ellos. Por ejemplo, si la dirección de correo electrónico personal de su equipo de directo es **direct@mycompany.example.com**, cada correo electrónico enviado creará automáticamente una nueva oportunidad en el equipo de ventas."
+
+#: ../../crm/leads/generate/emails.rst:14
+#: ../../crm/leads/generate/website.rst:73
+#: ../../crm/leads/manage/automatic_assignation.rst:30
+#: ../../crm/leads/manage/lead_scoring.rst:19
+#: ../../crm/overview/started/setup.rst:10
+msgid "Configuration"
+msgstr "Configuración"
+
+#: ../../crm/leads/generate/emails.rst:16
+msgid ""
+"The first thing you need to do is to configure your **outgoing email "
+"servers** and **incoming email gateway** from the :menuselection:`Settings "
+"module --> General Settings`."
+msgstr "Lo primero que necesita hacer es configurar **los servidores de correo electrónico salientes** y **el correo electrónico de entrada** desde el :menuselection:`Módulo Ajustes --> Configuración General`."
+
+#: ../../crm/leads/generate/emails.rst:19
+msgid ""
+"Then set up your alias domain from the field shown here below and click on "
+"**Apply**."
+msgstr "Luego de configurar el nombre del dominio en el campo que se muestra a continuación y haga clic en **Aplicar**."
+
+#: ../../crm/leads/generate/emails.rst:26
+msgid "Set up team alias"
+msgstr "Crear un nombre de dominio del equipo"
+
+#: ../../crm/leads/generate/emails.rst:28
+msgid ""
+"Go on the Sales module and click on **Dashboard**. You will see that the "
+"activation of your domain alias has generated a default email alias for your"
+" existing sales teams."
+msgstr "Vaya al módulo de Ventas y haga clic en **Tablero**. Usted verá que la activación del nombre de su dominio ha generado un nombre de correo electrónico predeterminado para sus equipos de ventas existentes."
+
+#: ../../crm/leads/generate/emails.rst:35
+msgid ""
+"You can easily personalize your sales teams aliases. Click on the More "
+"button from the sales team of your choice, then on **Settings** to access "
+"the sales team form. Into the **Email Alias** field, enter your email alias "
+"and click on **Save**. Make sure to allow receiving emails from everyone."
+msgstr ""
+
+#: ../../crm/leads/generate/emails.rst:41
+msgid ""
+"From there, each email sent to this email address will generate a new lead "
+"into the related sales team."
+msgstr "A partir de ahí, cada correo electrónico enviado a esta dirección, generará una nueva\niniciativa en el equipo de ventas relacionado."
+
+#: ../../crm/leads/generate/emails.rst:48
+msgid "Set up catch-all email domain"
+msgstr "Configurar un dominio de correo catch-all"
+
+#: ../../crm/leads/generate/emails.rst:50
+msgid ""
+"Additionally to your sales team aliases, you can also create a generic email"
+" alias (e.g. *contact@* or *info@* ) that will also generate a new contact "
+"in Odoo CRM. Still from the Sales module, go to "
+":menuselection:`Configuration --> Settings` and set up your catch-all email "
+"domain."
+msgstr "Adicionalmente al nombre del equipo de ventas, también puede crear un nombre de correo electrónico genérico (por ejemplo, *contacto@* o *info@*), que también va a generar un nuevo contacto en Odoo CRM. Después, desde el módulo de ventas, vaya a :menuselection:`Configuración --> Ajustes` y configure su dominio de correo catch-all."
+
+#: ../../crm/leads/generate/emails.rst:57
+msgid ""
+"You can choose whether the contacts generated from your catch-all email "
+"become leads or opportunities using the radio buttons that you see on the "
+"screenshot here below. Note that, by default, the lead stage is not "
+"activated in Odoo CRM."
+msgstr "Usted puede elegir si los contactos generados a partir del correo catch-all se convierten en clientes potenciales u oportunidades utilizando los botones de radio que se ven la captura de pantalla a continuación. Tenga en cuenta que, por defecto, la etapa de la iniciativa no se activa en Odoo CRM."
+
+#: ../../crm/leads/generate/emails.rst:67
+#: ../../crm/leads/generate/import.rst:89
+#: ../../crm/leads/generate/website.rst:194
+msgid ":doc:`manual`"
+msgstr ":doc:`manual`"
+
+#: ../../crm/leads/generate/emails.rst:68
+#: ../../crm/leads/generate/manual.rst:69
+#: ../../crm/leads/generate/website.rst:195
+msgid ":doc:`import`"
+msgstr ":doc:`import`"
+
+#: ../../crm/leads/generate/emails.rst:69
+#: ../../crm/leads/generate/import.rst:91
+#: ../../crm/leads/generate/manual.rst:73
+msgid ":doc:`website`"
+msgstr ":doc:`website`"
+
+#: ../../crm/leads/generate/import.rst:3
+msgid "How to import contacts to the CRM?"
+msgstr "¿Cómo importar contactos al CRM?"
+
+#: ../../crm/leads/generate/import.rst:5
+msgid ""
+"In Odoo CRM, you can import a database of potential customers, for instance "
+"for a cold emailing or cold calling campaign, through a CSV file. You may be"
+" wondering if the best option is to import your contacts as leads or "
+"opportunities. It depends on your business specificities and workflow:"
+msgstr "En Odoo CRM, se puede importar una base de datos de clientes potenciales, por ejemplo para una campaña de llamadas o de correos electrónicos para dar información de la empresa, a través de un archivo CSV. Usted se preguntará si la mejor opción es importar sus contactos como iniciativas u oportunidades; depende de sus especificaciones de negocios y flujo de trabajo:"
+
+#: ../../crm/leads/generate/import.rst:11
+msgid ""
+"Some companies may decide to not use leads, but instead to keep all "
+"information directly in an opportunity. For some companies, leads are merely"
+" an extra step in the sales process. You could call this extended (start "
+"from lead) versus simplified (start from opportunity) customer relationship "
+"management."
+msgstr "Algunas compañías pueden decidir no usar iniciativas y en su lugar prefieren mantener toda la información directamente en una oportunidad. Para algunas empresas, iniciativas no son más que un paso adicional en el proceso de venta. Usted podría llamar a esta extensión (comienzo de iniciativa) contra la simplificación (inicio de la oportunidad) de gestión de relaciones con los clientes."
+
+#: ../../crm/leads/generate/import.rst:17
+msgid ""
+"Odoo perfectly allows for either one of these approaches to be chosen. If "
+"your company handles its sales from a pre qualification step, feel free to "
+"activate first the lead stage as described below in order to import your "
+"database as leads"
+msgstr "Odoo permite perfectamente que cualquiera de estos enfoques sea seleccionado. Si su empresa maneja en las ventas un paso de precalificación, no dude en activar primero el escenario principal como se describe a continuación con el fin de importar la base de datos y las iniciativas."
+
+#: ../../crm/leads/generate/import.rst:23
+#: ../../crm/leads/generate/manual.rst:9
+#: ../../crm/leads/generate/website.rst:38
+#: ../../crm/salesteam/setup/organize_pipeline.rst:62
+msgid "Activate the lead stage"
+msgstr "Activar el estado iniciativa"
+
+#: ../../crm/leads/generate/import.rst:25
+msgid ""
+"By default, the lead stage is not activated in Odoo CRM. If you want to "
+"import your contacts as leads rather than opportunities, go to "
+":menuselection:`Configuration --> Settings`, select the option **use leads "
+"if…** as shown below and click on **Apply**."
+msgstr "Por defecto, la etapa de la iniciativa no se activa en Odoo CRM. Si desea importar los contactos como iniciativas en lugar de oportunidades, vaya a :menuselection:`Configuración --> Ajustes`, seleccione la opción **usar iniciativas si...** como se muestra a continuación y haga clic en **Aplicar**."
+
+#: ../../crm/leads/generate/import.rst:33
+msgid ""
+"This activation will create a new submenu :menuselection:`Sales --> Leads` "
+"from which you will be able to import your contacts from the **Import** "
+"button (if you want to create a lead manually, :doc:`click here <manual>`)"
+msgstr "Esta activación creará un nuevo submenú :menuselection:`Ventas --> Iniciativas` desde la que se podrán importar sus contactos con el botón **Importar** (si desea crear una iniciativa de forma manual, :doc: haga clic aquí <manual>`)"
+
+#: ../../crm/leads/generate/import.rst:41
+msgid "Import your CSV file"
+msgstr "Importar archivo CSV"
+
+#: ../../crm/leads/generate/import.rst:43
+msgid ""
+"On the new submenu :menuselection:`Sales --> Leads`, click on **Import** and"
+" select your Excel file to import from the **Choose File** button. Make sure"
+" its extension is **.csv** and don't forget to set up the correct File "
+"format options (**Encoding** and **Separator**) to match your local settings"
+" and display your columns properly."
+msgstr "En el nuevo submenú :menuselection: `Ventas --> Iniciativas`, haga clic en **Importar** y seleccione el archivo de Excel para importar desde el botón **Elegir archivo**. Asegúrese de que su extensión sea .csv y no se olvide de configurar las opciones de formato de los archivos correctamente (**Codificación** y *Separador**) para que coincida con los valores locales y se muestren las columnas correctamente."
+
+#: ../../crm/leads/generate/import.rst:50
+msgid ""
+"If your prospects database is provided in another format than CSV, you can "
+"easily convert it to the CSV format using Microsoft Excel, OpenOffice / "
+"LibreOffice Calc, Google Docs, etc."
+msgstr "Si la base de datos de los prospectos se proporciona en otro formato que no sea CSV, usted puede fácilmente convertir al formato CSV con Microsoft Excel, OpenOffice / LibreOffice Calc, Google Docs, etc."
+
+#: ../../crm/leads/generate/import.rst:58
+msgid "Select rows to import"
+msgstr "Seleccionar filas para importar"
+
+#: ../../crm/leads/generate/import.rst:60
+msgid ""
+"Odoo will automatically map the column headers from your CSV file to the "
+"corresponding fields if you tick *The first row of the file contains the "
+"label of the column* option. This makes imports easier especially when the "
+"file has many columns. Of course, you can remap the column headers to "
+"describe the property you are importing data into (First Name, Last Name, "
+"Email, etc.)."
+msgstr "Odoo asignará automáticamente los encabezados de las columnas de su archivo CSV a los campos correspondientes, si se marca la opción de *La primera fila del archivo que contiene la etiqueta de la columna*. Esto hace que las importaciones sean más fáciles, especialmente cuando el archivo tiene muchas columnas. Por supuesto, puede reasignar los encabezados de la columna para describir la propiedad que va a importar de datos dentro (Nombre, Apellidos, Correo electrónico, etc.)."
+
+#: ../../crm/leads/generate/import.rst:72
+msgid ""
+"If you want to import your contacts as opportunities rather than leads, make"
+" sure to add the *Type* column to your csv. This column is used to indicate "
+"whether your import will be flagged as a Lead (type = Lead) or as an "
+"opportunity (type = Opportunity)."
+msgstr "Si desea importar los contactos como oportunidades en lugar de iniciativas, asegúrese de añadir la columna *Tipo* en su csv. Esta columna se utiliza para indicar si al importar se marcará como una iniciativa (tipo = Iniciativa) o como una oportunidad (tipo = Oportunidad)."
+
+#: ../../crm/leads/generate/import.rst:77
+msgid ""
+"Click the **Validate** button if you want to let Odoo verify that everything"
+" seems okay before importing. Otherwise, you can directly click the Import "
+"button: the same validations will be done."
+msgstr "Haga clic en el botón **Validar** si desea dejar a Odoo verificar que todo se encuentre bien antes de importar. De lo contrario, puede hacer clic directamente en el botón Importar: y se realizarán las mismas validaciones."
+
+#: ../../crm/leads/generate/import.rst:83
+msgid ""
+"For additional technical information on how to import contacts into Odoo "
+"CRM, read the **Frequently Asked Questions** section located below the "
+"Import tool on the same window."
+msgstr "Para obtener información técnica adicional sobre cómo importar contactos en Odoo CRM, lea la sección de **Preguntas Frecuentes** situada debajo de la herramienta de Importar en la misma ventana."
+
+#: ../../crm/leads/generate/import.rst:90
+#: ../../crm/leads/generate/manual.rst:71
+#: ../../crm/leads/generate/website.rst:196
+msgid ":doc:`emails`"
+msgstr ":doc:`emails`"
+
+#: ../../crm/leads/generate/manual.rst:3
+msgid "How to create a contact into Odoo CRM?"
+msgstr "¿Cómo crear un contacto en Odoo CRM?"
+
+#: ../../crm/leads/generate/manual.rst:5
+msgid ""
+"Odoo CRM allows you to manually add contacts into your pipeline. It can be "
+"either a lead or an opportunity."
+msgstr "Odoo CRM le permite añadir manualmente contactos en su flujo de ventas. Puede ser una iniciativa o una oportunidad."
+
+#: ../../crm/leads/generate/manual.rst:11
+msgid ""
+"By default, the lead stage is not activated in Odoo CRM. To activate it, go "
+"to :menuselection:`Configuration --> Settings`, select the option \"\"use "
+"leads if…** as shown below and click on **Apply**."
+msgstr "Por defecto, la etapa de la iniciativa no se activa en Odoo CRM. Para activarlo, vaya a :menuselection:`Configuración --> Ajustes`, seleccione la opción \"\"use iniciativa si...** como se muestra a continuación y haga clic en **Aplicar**."
+
+#: ../../crm/leads/generate/manual.rst:18
+msgid ""
+"This activation will create a new submenu **Leads** under **Sales** that "
+"gives you access to a list of all your leads from which you will be able to "
+"create a new contact."
+msgstr "Esta activación creará un nuevo submenú **Iniciativas** dentro de **Ventas** que \nle da acceso a una lista de todos sus iniciativas en la cual será capaz de crear \nun nuevo contacto."
+
+#: ../../crm/leads/generate/manual.rst:26
+msgid "Create a new lead"
+msgstr "Crear una nueva iniciativa"
+
+#: ../../crm/leads/generate/manual.rst:28
+msgid ""
+"Go to :menuselection:`Sales --> Leads` and click the **Create** button."
+msgstr "Ir a :menuselection:`Ventas --> Iniciativas` y hacer clic en el botón de **Crear**."
+
+#: ../../crm/leads/generate/manual.rst:33
+msgid ""
+"From the contact form, provide all the details in your possession (contact "
+"name, email, phone, address, etc.) as well as some additional information in"
+" the **Internal notes** field. You can also link the lead to an existing "
+"company by editing the**Customer** field. Click on save and the contact will"
+" be visible as a lead in your pipeline ."
+msgstr "Desde el formato de contacto, se proporcionan todos los detalles que se poseen (nombre de contacto, correo electrónico, teléfono, dirección, etc.), así como alguna información adicional en el campo de **Notas Internas**. También se puede vincular la iniciativa con el link a una empresa ya existente editando el campo **Cliente**. Haga clic en Guardar y el contacto será visible como una iniciativa en su flujo de ventas."
+
+#: ../../crm/leads/generate/manual.rst:41
+msgid ""
+"your lead can be directly handed over to specific sales team and salesperson"
+" by clicking on **Convert to Opportunity** on the upper left corner of the "
+"screen."
+msgstr "su iniciativa está vinculada directamente a un equipo de ventas específico o a un vendedor, haga clic en el botón **Convertir a Oportunidad** en la esquina superior izquierda de la pantalla."
+
+#: ../../crm/leads/generate/manual.rst:45
+msgid "Create a new opportunity"
+msgstr "Crear una nueva oportunidad"
+
+#: ../../crm/leads/generate/manual.rst:47
+msgid ""
+"You can also directly add a contact into a specific sales team without "
+"having to convert the lead first. On the Sales module, go to your dashboard "
+"and click on the **Pipeline** button of the desired sales team. If you don't"
+" have any sales team yet, :doc:`you need to create one first "
+"<../../salesteam/setup/create_team>`. Then, click on **Create** and fill in "
+"the contact details as shown here above. By default, the newly created "
+"opportunity will appear on the first stage of your sales pipeline."
+msgstr "También se puede añadir directamente un contacto a un equipo de ventas específico sin tener que convertir la iniciativa en primer lugar. En el módulo de Ventas, vaya a su tablero y haga clic en el botón de **Flujo de trabajo** del equipo de ventas deseado. Si usted no tiene ningún equipo de ventas aún, :doc:`es necesario crearlo primero <../../salesteam/setup/create_team>`. A continuación, haga clic en **Crear** y después es necesario llenar los datos del contacto como se muestra arriba. Por defecto, la oportunidad recién creada aparecerá en la primera etapa de su proceso de ventas."
+
+#: ../../crm/leads/generate/manual.rst:55
+msgid ""
+"Another way to create an opportunity is by adding it directly on a specific "
+"stage. For example, if you have have spoken to Mr. Smith at a meeting and "
+"you want to send him a quotation right away, you can add his contact details"
+" on the fly directly into the **Proposition** stage. From the Kanban view of"
+" your sales team, just click on the **+** icon at the right of your stage to"
+" create the contact. The new opportunity will then pop up into the "
+"corresponding stage and you can then fill in the contact details by clicking"
+" on it."
+msgstr "Otra forma de crear una oportunidad es añadiéndolo directamente en una etapa específica. Por ejemplo, si usted tiene en el historial que habló con el Sr. Smith en una reunión y desea que envié una cita de inmediato, usted puede agregar los datos del contacto directamente en la etapa de la **Propuesta**. Desde el punto de vista de Kanban de su equipo de ventas, simplemente haga clic en el icono **+** a la derecha del tablero, para crear el contacto. Entonces, la nueva oportunidad aparecerá en la etapa correspondiente y, a continuación, puede completar los datos de contacto haciendo clic en el."
+
+#: ../../crm/leads/generate/website.rst:3
+msgid "How to generate leads from my website?"
+msgstr "¿Cómo generar iniciativas desde mi sitio web?"
+
+#: ../../crm/leads/generate/website.rst:5
+msgid ""
+"Your website should be your company's first lead generation tool. With your "
+"website being the central hub of your online marketing campaigns, you will "
+"naturally drive qualified traffic to feed your pipeline. When a prospect "
+"lands on your website, your objective is to capture his information in order"
+" to be able to stay in touch with him and to push him further down the sales"
+" funnel."
+msgstr "Su sitio web debe ser la primera herramienta de generación de iniciativas de la empresa. Con el sitio web en el eje central de sus campañas de publicidad en línea, usted va a conducir naturalmente tráfico cualificado para alimentar a su flujo de ventas. Cuando un prospecto cae en el sitio web, su objetivo es capturar la información, con el fin de ser capaz de mantenerse en contacto con él y empujarlo más abajo del canal de ventas."
+
+#: ../../crm/leads/generate/website.rst:12
+msgid "This is how a typical online lead generation process work :"
+msgstr "De esta manera es el proceso de trabajo de la generación de iniciativas:"
+
+#: ../../crm/leads/generate/website.rst:14
+msgid ""
+"Your website visitor clicks on a call-to action (CTA) from one of your "
+"marketing materials (e.g. an email newsletter, a social media message or a "
+"blog post)"
+msgstr "Un visitante en su sitio web, hace clic en una llamada de acción (CTA) desde uno de sus materiales de publicidad (por ejemplo, un boletín electrónico, un mensaje de los medios de comunicación sociales o una entrada de blog)"
+
+#: ../../crm/leads/generate/website.rst:18
+msgid ""
+"The CTA leads your visitor to a landing page including a form used to "
+"collect his personal information (e.g. his name, his email address, his "
+"phone number)"
+msgstr "La CTA lleva a su visitante a una página de destino que incluye un formulario que se utiliza para recoger su información personal (por ejemplo, su nombre, su dirección de correo electrónico, su número de teléfono)"
+
+#: ../../crm/leads/generate/website.rst:22
+msgid ""
+"The visitor submits the form and automatically generates a lead into Odoo "
+"CRM"
+msgstr "El visitante envía el formulario y automáticamente se genera como iniciativa en Odoo CRM"
+
+#: ../../crm/leads/generate/website.rst:27
+msgid ""
+"Your calls-to-action, landing pages and forms are the key pieces of the lead"
+" generation process. With Odoo Website, you can easily create and optimize "
+"those critical elements without having to code or to use third-party "
+"applications. Learn more `here <https://www.odoo.com/page/website-"
+"builder>`__."
+msgstr "Las llamadas de acción, las páginas y formas de destino, son las piezas clave del proceso de generación de iniciativas. Con el sitio web de Odoo, usted puede crear fácilmente y optimizar los elementos críticos sin tener que codificar o utilizar aplicaciones de terceros. Obtenga más información `aquí <https://www.odoo.com/page/website-builder>`__."
+
+#: ../../crm/leads/generate/website.rst:32
+msgid ""
+"In Odoo, the Website and CRM modules are fully integrated, meaning that you "
+"can easily generate leads from various ways through your website. However, "
+"even if you are hosting your website on another CMS, it is still possible to"
+" fill Odoo CRM with leads generated from your website."
+msgstr "En Odoo, el sitio web y los módulos de CRM están totalmente integrados, lo que significa que usted puede fácilmente generar clientes potenciales de diversas maneras a través de su sitio web. Sin embargo, incluso si usted es anfitrión de su sitio web en otro CMS, aún así es posible completar los datos que requiere Odoo CRM con clientes potenciales generados desde su sitio web."
+
+#: ../../crm/leads/generate/website.rst:40
+msgid ""
+"By default, the lead stage is not activated in Odoo CRM. Therefore, new "
+"leads automatically become opportunities. You can easily activate the option"
+" of adding the lead step. If you want to import your contacts as leads "
+"rather than opportunities, from the Sales module go to "
+":menuselection:`Configuration --> Settings`, select the option **use leads "
+"if…** as shown below and click on **Apply**."
+msgstr "Por defecto, la etapa de la iniciativa no se activa en Odoo CRM. Por lo tanto, nuevas iniciativas se convierten automáticamente en oportunidades. Usted puede activar fácilmente la opción de agregar iniciativas. Si desea importar los contactos que tiene como oportunidades, desde el módulo de Ventas ir a :menuselection: `Configuración --> Ajustes`, seleccione la opción **Usar iniciativas si...** como se muestra a continuación y haga clic en **Aplicar**."
+
+#: ../../crm/leads/generate/website.rst:50
+msgid ""
+"Note that even without activating this step, the information that follows is"
+" still applicable - the lead generated will land in the opportunities "
+"dashboard."
+msgstr "Tenga en cuenta que, incluso sin activar este paso, la información que sigue entrando, todavía es aplicable - la iniciativa generada aterrizará en el tablero de oportunidades."
+
+#: ../../crm/leads/generate/website.rst:55
+msgid "From an Odoo Website"
+msgstr "Desde el sitio web de Odoo "
+
+#: ../../crm/leads/generate/website.rst:57
+msgid ""
+"Let's assume that you want to get as much information as possible about your"
+" website visitors. But how could you make sure that every person who wants "
+"to know more about your company's products and services is actually leaving "
+"his information somewhere? Thanks to Odoo's integration between its CRM and "
+"Website modules, you can easily automate your lead acquisition process "
+"thanks to the **contact form** and the **form builder** modules"
+msgstr "Supongamos que desea obtener la mayor cantidad de información posible acerca de cada visita al sitio web. Pero, ¿cómo podría usted asegurarse de que cada persona que quiere saber más sobre los productos y servicios de su empresa, dejará la información en cualquier lugar? Gracias a la integración de Odoo entre sus módulos de CRM y sitios Web, usted puede automatizar fácilmente los procesos de adquisición de iniciativas, gracias a los módulos de **Formulario de Contacto** y **Construcción de Formularios**"
+
+#: ../../crm/leads/generate/website.rst:67
+msgid ""
+"another great way to generate leads from your Odoo Website is by collecting "
+"your visitors email addresses thanks to the Newsletter or Newsletter Popup "
+"CTAs. These snippets will create new contacts in your Email Marketing's "
+"mailing list. Learn more `here <https://www.odoo.com/page/email-"
+"marketing>`__."
+msgstr "otra gran manera de generar iniciativas desde el sitio web de Odoo es mediante la recopilación de direcciones de correo electrónico de los visitantes gracias a la Newsletter o Boletín emergente CTA. Estos fragmentos crearán nuevos contactos en su lista de correo electrónico de publicidad. Obtenga más información `aquí <https://www.odoo.com/page/email-marketing>`_."
+
+#: ../../crm/leads/generate/website.rst:75
+msgid ""
+"Start by installing the Website builder module. From the main dashboard, "
+"click on **Apps**, enter \"**Website**\" in the search bar and click on "
+"**Install**. You will be automatically redirected to the web interface."
+msgstr "Comience por instalar el módulo constructor del sitio web. Desde el panel de control principal, haga clic en **Aplicaciones**, escriba \"**Sitio Web**\" en la barra de búsqueda y haga clic en **Instalar**. Usted será redirigido automáticamente a la interfaz web."
+
+#: ../../crm/leads/generate/website.rst:84
+msgid ""
+"A tutorial popup will appear on your screen if this is the first time you "
+"use Odoo Website. It will help you get started with the tool and you'll be "
+"able to use it in minutes. Therefore, we strongly recommend you to use it."
+msgstr "Un tutorial emergente aparece en la pantalla si esta es la primera vez que utiliza el Sitio Web de Odoo. Este le ayudará a iniciar con la herramienta y usted será capaz de utilizarlo en cuestión de minutos. Por lo tanto, le recomendamos usarlo."
+
+#: ../../crm/leads/generate/website.rst:89
+msgid "Create a lead by using the Contact Form module"
+msgstr "Crear una iniciativa mediante el módulo de Formulario de contacto"
+
+#: ../../crm/leads/generate/website.rst:91
+msgid ""
+"You can effortlessly generate leads via a contact form on your **Contact "
+"us** page. To do so, you first need to install the Contact Form module. It "
+"will add a contact form in your **Contact us** page and automatically "
+"generate a lead from forms submissions."
+msgstr "Puede generar iniciativas sin esfuerzo a través de un formulario de contacto en su página de **Contáctanos**. Para ello, primero debe instalar el Módulo de Formulario de Contacto. Se agregará un formulario de contacto en su página de **Contáctanos** y automáticamente se generará una presentación de los formularios de las diferentes iniciativas."
+
+#: ../../crm/leads/generate/website.rst:96
+msgid ""
+"To install it, go back to the backend using the square icon on the upper-"
+"left corner of your screen. Then, click on **Apps**, enter \"**Contact "
+"Form**\" in the search bar (don't forget to remove the **Apps** tag "
+"otherwise you will not see the module appearing) and click on **Install**."
+msgstr "Para instalarlo, vuelva a la pantalla de fondo utilizando el icono cuadrado en la esquina superior izquierda. A continuación, haga clic en **Aplicaciones**, escriba \"**Formulario de contacto**\" en la barra de búsqueda (no se olvide de quitar la etiqueta **Aplicaciones** de otro modo que no verá el módulo) y haga clic en **Instalar**."
+
+#: ../../crm/leads/generate/website.rst:104
+msgid ""
+"Once the module is installed, the below contact form will be integrated to "
+"your \"Contact us\" page. This form is linked to Odoo CRM, meaning that all "
+"data entered through the form will be captured by the CRM and will create a "
+"new lead."
+msgstr "Una vez instalado el módulo, el siguiente formulario de contacto se integrará a su página \"**Contáctanos**\". Este formulario está vinculado a Odoo CRM, lo que significa que todos los datos introducidos a través del formulario serán capturados por el CRM y se creará una nueva iniciativa."
+
+#: ../../crm/leads/generate/website.rst:112
+msgid ""
+"Every lead created through the contact form is accessible in the Sales "
+"module, by clicking on :menuselection:`Sales --> Leads`. The name of the "
+"lead corresponds to the \"Subject\" field on the contact form and all the "
+"other information is stored in the corresponding fields within the CRM. As a"
+" salesperson, you can add additional information, convert the lead into an "
+"opportunity or even directly mark it as Won or Lost."
+msgstr "Cada iniciativa creada a través del formulario de contacto está disponible en el módulo de Ventas, haciendo clic en :menuselection:`Ventas --> Iniciativas`. El nombre de la iniciativa corresponde al campo \"Asunto\" en el formulario de contacto y toda la otra información se almacena en los campos correspondientes dentro del CRM. Como vendedor, usted puede añadir información adicional, convertir la iniciativa en una oportunidad o incluso directamente marcarlo como Ganado o Perdido."
+
+#: ../../crm/leads/generate/website.rst:123
+msgid "Create a lead using the Form builder module"
+msgstr "Crear iniciativas usando el módulo de Construcción de Formularios"
+
+#: ../../crm/leads/generate/website.rst:125
+msgid ""
+"You can create fully-editable custom forms on any landing page on your "
+"website with the Form Builder snippet. As for the Contact Form module, the "
+"Form Builder will automatically generate a lead after the visitor has "
+"completed the form and clicked on the button **Send**."
+msgstr "Puede crear formularios personalizados totalmente editables en cualquier página de entrada en su sitio web con el fragmento de Forma de construir. En cuanto al módulo de Formulario de contacto, el Constructor de Formularios generará automáticamente una iniciativa después de que el visitante haya completado el formulario y haga clic en el botón **Enviar**."
+
+#: ../../crm/leads/generate/website.rst:130
+msgid ""
+"From the backend, go to Settings and install the \"**Website Form "
+"Builder**\" module (don't forget to remove the **Apps** tag otherwise you "
+"will not see the modules appearing). Then, back on the website, go to your "
+"desired landing page and click on Edit to access the available snippets. The"
+" Form Builder snippet lays under the **Feature** section."
+msgstr "Desde el backend, vaya a Configuración e instalar el módulo \"**Constructor de Formularios**\" (no te olvides de quitar la etiqueta **Aplicaciones** de lo contrario no verán los módulos). Luego, de vuelta en el sitio web, vaya a la página de destino que desee y haga clic en Editar para acceder a los fragmentos disponibles. El fragmento de Constructor de Formularios establece en la sección de **Características**."
+
+#: ../../crm/leads/generate/website.rst:140
+msgid ""
+"As soon as you have dropped the snippet where you want the form to appear on"
+" your page, a **Form Parameters** window will pop up. From the **Action** "
+"drop-down list, select **Create a lead** to automatically create a lead in "
+"Odoo CRM. On the **Thank You** field, select the URL of the page you want to"
+" redirect your visitor after the form being submitted (if you don't add any "
+"URL, the message \"The form has been sent successfully\" will confirm the "
+"submission)."
+msgstr "Tan pronto como se le ha caído el fragmento en el que desea que aparezca el formulario en su página, una ventana de **Parámetros del formulario** aparecerá. En la lista desplegable **Acción**, seleccione **Crear iniciativa** para crear automáticamente una iniciativa en Odoo CRM. En el campo **Gracias**, seleccione la dirección URL de la página que desea redirigir a su visitante después de haber completado la forma (si no agrega ninguna URL, el mensaje \"El formulario ha sido enviado con éxito\" confirmará la acción)."
+
+#: ../../crm/leads/generate/website.rst:151
+msgid ""
+"You can then start creating your custom form. To add new fields, click on "
+"**Select container block** and then on the blue **Customize** button. 3 "
+"options will appear:"
+msgstr "A continuación, puede empezar a crear su formulario personalizado. Para añadir \nnuevos campos, haga clic en **Seleccione el bloque contenedor** y luego en el \nbotón azul **Personalizar**. Aparecerán 3 opciones:"
+
+#: ../../crm/leads/generate/website.rst:158
+msgid ""
+"**Change Form Parameters**: allows you to go back to the Form Parameters and"
+" change the configuration"
+msgstr "**Cambie los parámetros de formulario**: esto le permite ir de nuevo a los parámetros de formulario y cambiar la configuración"
+
+#: ../../crm/leads/generate/website.rst:161
+msgid ""
+"**Add a model field**: allows you to add a field already existing in Odoo "
+"CRM from a drop-down list. For example, if you select the Field *Country*, "
+"the value entered by the lead will appear under the *Country* field in the "
+"CRM - even if you change the name of the field on the form."
+msgstr "**Añadir un campo al modelo**: esto le permite añadir un campo ya existente en Odoo CRM de una lista desplegable. Por ejemplo, si se selecciona el campo del *País*, el valor introducido por la iniciativa aparecerá bajo el campo *País* en el CRM - incluso si se cambia el nombre del campo en el formulario."
+
+#: ../../crm/leads/generate/website.rst:167
+msgid ""
+"**Add a custom field**: allows you to add extra fields that don't exist by "
+"default in Odoo CRM. The values entered will be added under \"Notes\" within"
+" the CRM. You can create any field type : checkbox, radio button, text, "
+"decimal number, etc."
+msgstr "**Agregar un campo personalizado**: esto le permite añadir campos adicionales que no existen de forma predeterminada en Odoo CRM. Los valores introducidos se añadirán en \"Notas\" en el CRM. Usted puede crear cualquier tipo de campo: casilla de verificación, botón de radio, texto, número decimal, etc."
+
+#: ../../crm/leads/generate/website.rst:172
+msgid "Any submitted form will create a lead in the backend."
+msgstr "Cualquier formulario presentado creará una entrada en la base de datos."
+
+#: ../../crm/leads/generate/website.rst:175
+msgid "From another CMS"
+msgstr "Desde otro CMS"
+
+#: ../../crm/leads/generate/website.rst:177
+msgid ""
+"If you use Odoo CRM but not Odoo Website, you can still automate your online"
+" lead generation process using email gateways by editing the \"Submit\" "
+"button of any form and replacing the hyperlink by a mailto corresponding to "
+"your email alias (learn how to create your sales alias :doc:`here "
+"<emails>`)."
+msgstr "Si utiliza Odoo CRM pero no el sitio web, todavía se puede automatizar el proceso de generación de prospectos en línea utilizando servidores de correo electrónico editando el botón \"Enviar\" de cualquier forma y reemplazar el hipervínculo por un mailto correspondiente a su nombre de correo electrónico (aprenderá a crear su nombre de ventas :doc:`aquí <emails>`)."
+
+#: ../../crm/leads/generate/website.rst:183
+msgid ""
+"For example if the alias of your company is **salesEMEA@mycompany.com**, add"
+" ``mailto:salesEMEA@mycompany.com`` into the regular hyperlink code (CTRL+K)"
+" to generate a lead into the related sales team in Odoo CRM."
+msgstr "Por ejemplo, si el nombre de su empresa es **salesEMEA@mycompany.com**, agregue ``mailto:salesEMEA@mycompany.com`` en el código del hipervínculo regular (CTRL+K) para generar una iniciativa en el equipo de ventas relacionadas en Odoo CRM."
+
+#: ../../crm/leads/manage.rst:3
+msgid "Manage leads"
+msgstr "Administrar Clientes Potenciales"
+
+#: ../../crm/leads/manage/automatic_assignation.rst:3
+msgid "Automate lead assignation to specific sales teams or salespeople"
+msgstr "Automatice la asignación de iniciativas a los equipos de ventas o vendedores específicos"
+
+#: ../../crm/leads/manage/automatic_assignation.rst:5
+msgid ""
+"Depending on your business workflow and needs, you may need to dispatch your"
+" incoming leads to different sales team or even to specific salespeople. "
+"Here are a few example:"
+msgstr "Dependiendo del flujo de trabajo y las necesidades de su empresa, usted necesita enviar a sus iniciativas entrantes a diferentes equipos de ventas o incluso especificar a cuales vendedores serán asignados. Éstos son algunos ejemplos: "
+
+#: ../../crm/leads/manage/automatic_assignation.rst:9
+msgid ""
+"Your company has several offices based on different geographical regions. "
+"You will want to assign leads based on the region;"
+msgstr "Su empresa tiene varias oficinas fijas en diferentes regiones geográficas. Usted tendrá que asignar las iniciativas basadas en la región;"
+
+#: ../../crm/leads/manage/automatic_assignation.rst:12
+msgid ""
+"One of your sales teams is dedicated to treat opportunities from large "
+"companies while another one is specialized for SMEs. You will want to assign"
+" leads based on the company size;"
+msgstr "Uno de sus equipos se dedica a tratar a las oportunidades de las grandes empresas mientras que otro equipo debe estar especializado en las PYMES. Usted tendrá que asignar las iniciativas en base al tamaño de la empresa;"
+
+#: ../../crm/leads/manage/automatic_assignation.rst:16
+msgid ""
+"One of your sales representatives is the only one to speak foreign languages"
+" while the rest of the team speaks English only. Therefore you will want to "
+"assign to that person all the leads from non-native English-speaking "
+"countries."
+msgstr "Uno de sus representantes de ventas es el único en hablar idiomas extranjeros, mientras que el resto des equipo habla Inglés solamente. Por lo tanto, tendrá que asignar a esa persona todas las iniciativas de los países donde el idioma Inglés no es su lengua nativa."
+
+#: ../../crm/leads/manage/automatic_assignation.rst:21
+msgid ""
+"As you can imagine, manually assigning new leads to specific individuals can"
+" be tedious and time consuming - especially if your company generates a high"
+" volume of leads every day. Fortunately, Odoo CRM allows you to automate the"
+" process of lead assignation based on specific criteria such as location, "
+"interests, company size, etc. With specific workflows and precise rules, you"
+" will be able to distribute all your opportunities automatically to the "
+"right sales teams and/or salesman."
+msgstr "Como se pueden imaginar, asignar manualmente nuevas iniciativas a personas específicas puede ser tedioso y lento, especialmente si su empresa genera un gran volumen de clientes potenciales cada día. Afortunadamente, Odoo CRM permite automatizar el proceso de asignación de iniciativas en base a criterios específicos, tales como la ubicación, intereses, tamaño de la empresa, etc., con flujos de trabajo específicos y reglas precisas, usted será capaz de distribuir todas sus oportunidades automáticamente a los equipos de ventas y/o al vendedor adecuado."
+
+#: ../../crm/leads/manage/automatic_assignation.rst:32
+msgid ""
+"If you have just started with Odoo CRM and haven't set up your sales team "
+"nor registered your salespeople, :doc:`read this documentation first "
+"<../../overview/started/setup>`."
+msgstr "Si usted acaba de iniciar a trabajar con Odoo y no sabe como estableces equipos de ventas, ni registrar a us vendedores, :doc:`revisa este documento primero <../../overview/started/setup>`."
+
+#: ../../crm/leads/manage/automatic_assignation.rst:36
+msgid "Define rules for a sales team"
+msgstr "Defina reglas para sus equipos de ventas"
+
+#: ../../crm/leads/manage/automatic_assignation.rst:38
+msgid ""
+"From the sales module, go to your dashboard and click on the **More** button"
+" of the desired sales team, then on **Settings**. If you don't have any "
+"sales team yet, :doc:`you need to create one first "
+"<../../salesteam/setup/create_team>`."
+msgstr "Desde el módulo de ventas, vaya a su panel de control y haga clic en el botón **Más** del equipo de ventas deseado, luego en **Configuración**. Si usted no tiene ningún equipo de ventas, :doc:`es necesario crearlo primero <../../salesteam/setup/create_team>`."
+
+#: ../../crm/leads/manage/automatic_assignation.rst:46
+msgid ""
+"On your sales team menu, use in the **Domain** field a specific domain rule "
+"(for technical details on the domain refer on the `Building a Module "
+"tutorial "
+"<https://www.odoo.com/documentation/8.0/howtos/backend.html#domains>`__ or "
+"`Syntax reference guide "
+"<https://www.odoo.com/documentation/8.0/reference/orm.html#reference-orm-"
+"domains>`__) which will allow only the leads matching the team domain."
+msgstr "En el menú de su equipo de ventas, use el **Dominio** del campo específico con su regla (para más detalles técnicos sobre el dominio, hacemos referencia al `Tutorial de Construcción de Módulos <https://www.odoo.com/documentation/8.0/howtos/backend.html#domains>`__ o a la  `Guía de referencias de Sintaxis <https://www.odoo.com/documentation/8.0/reference/orm.html#reference-orm-domains>`__) el cual permitirá que sólo las iniciativas coincidan con el equipo de ventas."
+
+#: ../../crm/leads/manage/automatic_assignation.rst:52
+msgid ""
+"For example, if you want your *Direct Sales* team to only receive leads "
+"coming from United States and Canada, your domain will be as following :"
+msgstr "Por ejemplo, si usted quiere que su equipo de *Ventas Directas* sólo reciba derivaciones procedentes de Estados Unidos y Canadá, el dominio será de la siguiente manera:"
+
+#: ../../crm/leads/manage/automatic_assignation.rst:55
+msgid "``[[country_id, 'in', ['United States', 'Canada']]]``"
+msgstr "``[[country_id, 'in', ['Estados Unidos', 'Canadá']]]``"
+
+#: ../../crm/leads/manage/automatic_assignation.rst:62
+msgid ""
+"you can also base your automatic assignment on the score attributed to your "
+"leads. For example, we can imagine that you want all the leads with a score "
+"under 100 to be assigned to a sales team trained for lighter projects and "
+"the leads over 100 to a more experienced sales team. Read more on :doc:`how "
+"to score leads here <lead_scoring>`."
+msgstr "también se puede basar la asignación automática de la puntuación atribuida a sus clientes potenciales. Por ejemplo, podemos imaginar que desea que todos las iniciativas con una puntuación por debajo de 100, se asignarán a un equipo de ventas entrenados para proyectos más ligeros y las iniciativas de más de 100 a un equipo de ventas con más experiencia. Lea más sobre :doc:`la forma de puntuación clientes potenciales aquí <lead_scoring>`."
+
+#: ../../crm/leads/manage/automatic_assignation.rst:68
+msgid "Define rules for a salesperson"
+msgstr "Defina reglas para los vendedores"
+
+#: ../../crm/leads/manage/automatic_assignation.rst:70
+msgid ""
+"You can go one step further in your assignment rules and decide to assign "
+"leads within a sales team to a specific salesperson. For example, if I want "
+"Toni Buchanan from the *Direct Sales* team to receive only leads coming from"
+" Canada, I can create a rule that will automatically assign him leads from "
+"that country."
+msgstr "Usted puede ir un paso más allá en sus reglas de asignación y decidir como asignar los clientes potenciales a un equipo de ventas o a un vendedor específico. Por ejemplo, si quiero que Toni Buchanan del equipo de *Ventas Directas* únicamente reciba iniciativas procedentes de Canadá, puedo crear una regla que asignará automáticamente las iniciativas ese país."
+
+#: ../../crm/leads/manage/automatic_assignation.rst:76
+msgid ""
+"Still from the sales team menu (see here above), click on the salesperson of"
+" your choice under the assignment submenu. Then, enter your rule in the "
+"*Domain* field."
+msgstr "Aún en el menú de equipo de ventas (ver aquí arriba), haga clic en el vendedor de su opción en el submenú asignación. A continuación, introduzca su regla en el campo *Dominio*."
+
+#: ../../crm/leads/manage/automatic_assignation.rst:85
+msgid ""
+"In Odoo, a lead is always assigned to a sales team before to be assigned to "
+"a salesperson. Therefore, you need to make sure that the assignment rule of "
+"your salesperson is a child of the assignment rule of the sales team."
+msgstr "En Odoo, una iniciativa siempre se asigna a un equipo de ventas antes de ser asignado a un vendedor. Por lo tanto, es necesario asegurarse de que la regla de asignación de su vendedor es un hijo de la regla de asignación del equipo de ventas."
+
+#: ../../crm/leads/manage/automatic_assignation.rst:91
+#: ../../crm/salesteam/manage/create_salesperson.rst:67
+msgid ":doc:`../../overview/started/setup`"
+msgstr ":doc:`../../overview/started/setup`"
+
+#: ../../crm/leads/manage/lead_scoring.rst:3
+msgid "How to do efficient Lead Scoring?"
+msgstr "¿Cómo hacer un puntaje de iniciativas eficiente? "
+
+#: ../../crm/leads/manage/lead_scoring.rst:5
+msgid ""
+"Odoo's Lead Scoring module allows you to give a score to your leads based on"
+" specific criteria - the higher the value, the more likely the prospect is "
+"“ready for sales”. Therefore, the best leads are automatically assigned to "
+"your salespeople so their pipe are not polluted with poor-quality "
+"opportunities."
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:12
+msgid ""
+"Lead scoring is a critical component of an effective lead management "
+"strategy. By helping your sales representative determine which leads to "
+"engage with in order of priority, you will increase their overall conversion"
+" rate and your sales team's efficiency."
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:22
+msgid "Install the Lead Scoring module"
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:24
+msgid "Start by installing the **Lead Scoring** module."
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:26
+msgid ""
+"Once the module is installed, you should see a new menu "
+":menuselection:`Sales --> Leads Management --> Scoring Rules`"
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:33
+msgid "Create scoring rules"
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:35
+msgid ""
+"Leads scoring allows you to assign a positive or negative score to your "
+"prospects based on any demographic or behavioral criteria that you have set "
+"(country or origin, pages visited, type of industry, role, etc.). To do so "
+"you'll first need to create rules that will assign a score to a given "
+"criteria."
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:43
+msgid ""
+"In order to assign the right score to your various rules, you can use these "
+"two methods:"
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:45
+msgid ""
+"Establish a list of assets that your ideal customer might possess to "
+"interest your company. For example, if you run a local business in "
+"California, a prospect coming from San Francisco should have a higher score "
+"than a prospect coming from New York."
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:49
+msgid ""
+"Dig into your data to uncover characteristics shared by your closed "
+"opportunities and most important clients."
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:52
+msgid ""
+"Please note that this is not an exact science, so you'll need time and "
+"feedback from your sales teams to adapt and fine tune your rules until "
+"getting the desired result."
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:56
+msgid ""
+"In the **Scoring Rules** menu, click on **Create** to write your first rule."
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:61
+msgid ""
+"First name your rule, then enter a value and a domain (refer on the "
+"`official python documentation <https://docs.python.org/2/tutorial/>`__ for "
+"more information). For example, if you want to assign 8 points to all the "
+"leads coming from **Belgium**, you'll need to give ``8`` as a **value** and "
+"``[['country\\_id',=,'Belgium']]`` as a domain."
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:68
+msgid "Here are some criteria you can use to build a scoring rule :"
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:70
+msgid "country of origin : ``'country_id'``"
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:72
+msgid "stage in the sales cycle : ``'stage_id'``"
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:74
+msgid ""
+"email address (e.g. if you want to score the professional email addresses) :"
+" ``'email_from'``"
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:76
+msgid "page visited : ``'score_pageview_ids.url'``"
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:78
+msgid "name of a marketing campaign : ``'campaign_id'``"
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:80
+msgid ""
+"After having activated your rules, Odoo will give a value to all your new "
+"incoming leads. This value can be found directly on your lead's form view."
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:88
+msgid "Assign high scoring leads to your sales teams"
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:90
+msgid ""
+"The next step is now to automatically convert your best leads into "
+"opportunities. In order to do so, you need to decide what is the minimum "
+"score a lead should have to be handed over to a given sales team. Go to your"
+" **sales dashboard** and click on the **More** button of your desired sales "
+"team, then on **Settings**. Enter your value under the **Minimum score** "
+"field."
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:100
+msgid ""
+"From the example above, the **Direct Sales** team will only receive "
+"opportunities with a minimum score of ``50``. The prospects with a lower "
+"score can either stay in the lead stage or be assigned to another sales team"
+" which has set up a different minimum score."
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:106
+msgid ""
+"Organize a meeting between your **Marketing** and **Sales** teams in order "
+"to align your objectives and agree on what minimum score makes a sales-ready"
+" lead."
+msgstr ""
+
+#: ../../crm/leads/manage/lead_scoring.rst:110
+msgid ":doc:`automatic_assignation`"
+msgstr ":doc:`automatic_assignation`"
+
+#: ../../crm/overview.rst:3
+msgid "Overview"
+msgstr "Información general"
+
+#: ../../crm/overview/main_concepts.rst:3
+msgid "Main Concepts"
+msgstr "Conceptos Principales"
+
+#: ../../crm/overview/main_concepts/terminologies.rst:3
+msgid "Odoo CRM Terminologies"
+msgstr "Teminología de Odoo CRM"
+
+#: ../../crm/overview/main_concepts/terminologies.rst:10
+msgid "**CRM (Customer relationship management)**:"
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:6
+msgid ""
+"System for managing a company's interactions with current and future "
+"customers. It often involves using technology to organize, automate, and "
+"synchronize sales, marketing, customer service, and technical support."
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:14
+msgid "**Sales cycle** :"
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:13
+msgid ""
+"Sequence of phases used by a company to convert a prospect into a customer."
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:20
+msgid "**Pipeline :**"
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:17
+msgid ""
+"Visual representation of your sales process, from the first contact to the "
+"final sale. It refers to the process by which you generate, qualify and "
+"close leads through your sales cycle."
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:24
+msgid "**Sales stage** :"
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:23
+msgid ""
+"In Odoo CRM, a stage defines where an opportunity is in your sales cycle and"
+" its probability to close a sale."
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:29
+msgid "**Lead :**"
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:27
+msgid ""
+"Someone who becomes aware of your company or someone who you decide to "
+"pursue for a sale, even if they don't know about your company yet."
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:34
+msgid "**Opportunity :**"
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:32
+msgid ""
+"A lead that has shown an interest in knowing more about your "
+"products/services and therefore has been handed over to a sales "
+"representative"
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:39
+msgid "**Customer :**"
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:37
+msgid ""
+"In Odoo CRM, a customer refers to any contact within your database, whether "
+"it is a lead, an opportunity, a client or a company."
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:45
+msgid "**Key Performance Indicator (KPI)** :"
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:42
+msgid ""
+"A KPI is a measurable value that demonstrates how effectively a company is "
+"achieving key business objectives. Organizations use KPIs to evaluate their "
+"success at reaching targets."
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:51
+msgid "**Lead scoring** :"
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:48
+msgid ""
+"System assigning a positive or negative score to prospects according to "
+"their web activity and personal informations in order to determine whether "
+"they are \"ready for sales\" or not."
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:62
+msgid "**Kanban view :**"
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:54
+msgid ""
+"In Odoo, the Kanban view is a workflow visualisation tool halfway between a "
+"`list view <https://www.odoo.com/documentation/8.0/reference/views.html"
+"#reference-views-list>`__ and a non-editable `form view "
+"<https://www.odoo.com/documentation/8.0/reference/views.html#reference-"
+"views-form>`__ and displaying records as \"cards\". Records may be grouped "
+"in columns for use in workflow visualisation or manipulation (e.g. tasks or "
+"work-progress management), or ungrouped (used simply to visualize records)."
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:66
+msgid "**List view :**"
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:65
+msgid ""
+"View allowing you to see your objects (contacts, companies, tasks, etc.) "
+"listed in a table."
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:71
+msgid "**Lead generation:**"
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:69
+msgid ""
+"Process by which a company collects relevant datas about potential customers"
+" in order to enable a relationship and to push them further down the sales "
+"cycle."
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:76
+msgid "**Campaign:**"
+msgstr ""
+
+#: ../../crm/overview/main_concepts/terminologies.rst:74
+msgid ""
+"Coordinated set of actions sent via various channels to a target audience "
+"and whose goal is to generate leads. In Odoo CRM, you can link a lead to the"
+" campaign which he comes from in order to measure its efficiency."
+msgstr ""
+
+#: ../../crm/overview/process.rst:3
+msgid "Process Overview"
+msgstr "Información general del Proceso"
+
+#: ../../crm/overview/process/generate_leads.rst:3
+msgid "Generating leads with Odoo CRM"
+msgstr "Generar iniciativas con Odoo CRM"
+
+#: ../../crm/overview/process/generate_leads.rst:6
+msgid "What is lead generation?"
+msgstr "¿Qué es generar una iniciativa?"
+
+#: ../../crm/overview/process/generate_leads.rst:8
+msgid ""
+"Lead generation is the process by which a company acquires leads and "
+"collects relevant datas about potential customers in order to enable a "
+"relationship and to turn them into customers."
+msgstr "El generar iniciativas es el proceso por el cual se adquiere contacto y se recogen los datos relevantes sobre los clientes con el fin de establecer una buena relación y poder volverlos clientes potenciales."
+
+#: ../../crm/overview/process/generate_leads.rst:12
+msgid ""
+"For example, a website visitor who fills in your contact form to know more "
+"about your products and services becomes a lead for your company. Typically,"
+" a Customer Relationship Management tool such as Odoo CRM is used to "
+"centralize, track and manage leads."
+msgstr "Por ejemplo, un visitante de tu página web que llena el formulario de contacto pidiendo más información acerca de los productos y servicios, se convierte en una oportunidad para tu empresa. Por lo general, una herramienta de gestión de relaciones con los clientes, como Odoo CRM, se utiliza para centralizar, para dar seguimiento y dar un mejor servicio a tus clientes potenciales. "
+
+#: ../../crm/overview/process/generate_leads.rst:18
+msgid "Why is lead generation important for my business?"
+msgstr "¿Por qué es importante generar iniciativas para la empresa?"
+
+#: ../../crm/overview/process/generate_leads.rst:20
+msgid ""
+"Generating a constant flow of high-quality leads is one of the most "
+"important responsibility of a marketing team. Actually, a well-managed lead "
+"generation process is like the fuel that will allow your company to deliver "
+"great performances - leads bring meetings, meetings bring sales, sales bring"
+" revenue and more work."
+msgstr "El generar un flujo constante de clientes potenciales de alta calidad es una de las más importantes responsabilidades del equipo de ventas. En realidad, un buen manejo de generar iniciativas es como el combustible de la empresa que le permitirá entregar grandes resultados; las iniciativas traen reuniones, las reuniones traen ventas, las ventas provocan ingresos y mas trabajo."
+
+#: ../../crm/overview/process/generate_leads.rst:27
+msgid "How to generate leads with Odoo CRM?"
+msgstr "¿Cómo generar iniciativas con Odoo CRM?"
+
+#: ../../crm/overview/process/generate_leads.rst:29
+msgid ""
+"Leads can be captured through many sources - marketing campaigns, "
+"exhibitions and trade shows, external databases, etc. The most common "
+"challenge is to successfully gather all the data and to track any lead "
+"activity. Storing leads information in a central place such as Odoo CRM will"
+" release you of these worries and will help you to better automate your lead"
+" generation process, share information with your teams and analyze your "
+"sales processes easily."
+msgstr "Las iniciativas pueden ser capturadas de diferentes maneras, por publicidad, campañas, exhibiciones y ferias de negocios, bases de datos externas, etc. El reto más común es reunir con éxito todos los datos y realizar el seguimiento de cualquier actividad de la iniciativa. Al almacenar la información de cada iniciativa, Odoo CRM lo liberará de estas preocupaciones y le ayudará a tener una mejor automatización del proceso de generar iniciativas, compartiendo información con su equipo de ventas y analizando los procesos de manera muy fácil."
+
+#: ../../crm/overview/process/generate_leads.rst:37
+msgid "Odoo CRM provides you with several methods to generate leads:"
+msgstr "Odoo CRM ofrece varios métodos para generar iniciativas:"
+
+#: ../../crm/overview/process/generate_leads.rst:39
+msgid ":doc:`../../leads/generate/emails`"
+msgstr ""
+
+#: ../../crm/overview/process/generate_leads.rst:41
+msgid ""
+"An inquiry email sent to one of your company's generic email addresses can "
+"automatically generate a lead or an opportunity."
+msgstr "Un correo electrónico enviado a una de las direcciones de correo genéricas de su empresa puede generar automáticamente una ventaja o una oportunidad."
+
+#: ../../crm/overview/process/generate_leads.rst:44
+msgid ":doc:`../../leads/generate/manual`"
+msgstr ""
+
+#: ../../crm/overview/process/generate_leads.rst:46
+msgid ""
+"You may want to follow up with a prospective customer met briefly at an "
+"exhibition who gave you his business card. You can manually create a new "
+"lead and enter all the needed information."
+msgstr "Es posible que desee hacer seguimiento de un cliente potencial con el que se reunió brevemente en una exposición donde intercambiaron tarjetas. Puede crear manualmente una nueva iniciativa e introducir toda la información necesaria."
+
+#: ../../crm/overview/process/generate_leads.rst:50
+msgid ":doc:`../../leads/generate/website`"
+msgstr ":doc:`../../leads/generate/website`"
+
+#: ../../crm/overview/process/generate_leads.rst:52
+msgid ""
+"A website visitor who fills in a form automatically generates a lead or an "
+"opportunity in Odoo CRM."
+msgstr "Un visitante de la página web que llena el formulario de registro, automáticamente genera una ventaja o una oportunidad en Odoo CRM."
+
+#: ../../crm/overview/process/generate_leads.rst:55
+msgid ":doc:`../../leads/generate/import`"
+msgstr ":doc:`../../leads/generate/import`"
+
+#: ../../crm/overview/process/generate_leads.rst:57
+msgid ""
+"You can provide your salespeople lists of prospects - for example for a cold"
+" emailing or a cold calling campaign - by importing them from any CSV file."
+msgstr "Puedes proveerles a tus agentes de ventas una lista de prospectos, por ejemplo un número de teléfono o un correo electrónico de clientes potenciales que no conocen la empresa, importándolos desde cualquier archivo CSV."
+
+#: ../../crm/overview/started.rst:3
+msgid "Getting started"
+msgstr "Primeros pasos"
+
+#: ../../crm/overview/started/setup.rst:3
+msgid "How to setup your teams, sales process and objectives?"
+msgstr "¿Cómo configurar los equipos, el proceso y los objetivos de las ventas?"
+
+#: ../../crm/overview/started/setup.rst:5
+msgid ""
+"This quick step-by-step guide will lead you through Odoo CRM and help you "
+"handle your sales funnel easily and constantly manage your sales funnel from"
+" lead to customer."
+msgstr "Esta guía rápida paso a paso los guiará a través Odoo CRM y les ayudará a manejar y canalizar sus ventas fácil y constantemente, administrando las ventas de iniciativas a clientes potenciales."
+
+#: ../../crm/overview/started/setup.rst:12
+msgid ""
+"Create your database from `www.odoo.com/start "
+"<http://www.odoo.com/start>`__, select the CRM icon as first app to install,"
+" fill in the form and click on *Create now*. You will automatically be "
+"directed to the module when the database is ready."
+msgstr "Primero es necesario crear una base de datos de `www.odoo.com/start <http://www.odoo.com/start>`__, seleccione el icono de CRM como primera aplicación para instalar, llene el formulario y haga clic en *Crear ahora*. Usted será automáticamente dirigido al módulo cuando la base de datos esté lista."
+
+#: ../../crm/overview/started/setup.rst:22
+msgid ""
+"You will notice that the installation of the CRM module has created the "
+"submodules Chat, Calendar and Contacts. They are mandatory so that every "
+"feature of the app is running smoothly."
+msgstr "Usted se dará cuenta de que la instalación del módulo de CRM ha creado los submódulos Chat, Calendario y Contactos. Estos son obligatorios para que todas las características de la aplicación funcionen sin problemas."
+
+#: ../../crm/overview/started/setup.rst:27
+msgid "Introduction to the Sales Planner"
+msgstr "Introducción a la Planeación de ventas"
+
+#: ../../crm/overview/started/setup.rst:29
+msgid ""
+"The Sales Planner is a useful step-by-step guide created to help you "
+"implement your sales funnel and define your sales objectives easier. We "
+"strongly recommend you to go through every step of the tool the first time "
+"you use Odoo CRM and to follow the requirements. Your input are strictly "
+"personal and intended as a personal guide and mentor into your work. As it "
+"does not interact with the backend, you are free to adapt any detail "
+"whenever you feel it is needed."
+msgstr "El Planificador de Ventas es una guía útil paso a paso, creado para ayudarle a implementar su canal de ventas y definir sus objetivos de ventas de manera sencilla. Le recomendamos que vaya a través de cada paso de la herramienta la primera vez que utilice Odoo CRM y es necesario seguir los requisitos. Su entrada es estrictamente personal y esta pretende ser una guía personal y como mentor en su trabajo. Como no interactúa con el servidor, usted es libre de adaptar cualquier detalle cada vez que sienta que es necesario."
+
+#: ../../crm/overview/started/setup.rst:37
+msgid ""
+"You can reach the Sales Planner from anywhere within the CRM module by "
+"clicking on the progress bar located on the upper-right side of your screen."
+" It will show you how far you are in the use of the Sales Planner."
+msgstr "Se puede llegar al Planificador de Ventas desde cualquier lugar dentro del módulo de CRM, haga clic en la barra de progreso situada en la parte superior derecha de la pantalla. Se le mostrará hasta dónde está usted en el uso del Planificador de Ventas."
+
+#: ../../crm/overview/started/setup.rst:46
+msgid "Set up your first sales team"
+msgstr "Configure su primer equipo de ventas"
+
+#: ../../crm/overview/started/setup.rst:49
+msgid "Create a new team"
+msgstr "Crea un nuevo equipo"
+
+#: ../../crm/overview/started/setup.rst:51
+msgid ""
+"A Direct Sales team is created by default on your instance. You can either "
+"use it or create a new one. Refer to the page "
+":doc:`../../salesteam/setup/create_team` for more information."
+msgstr "Un equipo de Venta Directa es creado por defecto en la instancia. Usted puede usarlo o crear uno nuevo. Consulte la página es :doc:`../../salesteam/setup/create_team` para más información."
+
+#: ../../crm/overview/started/setup.rst:56
+msgid "Assign salespeople to your sales team"
+msgstr "Asignar vendedores responsables al equipo de venta"
+
+#: ../../crm/overview/started/setup.rst:58
+msgid ""
+"When your sales teams are created, the next step is to link your salespeople"
+" to their team so they will be able to work on the opportunities they are "
+"supposed to receive. For example, if within your company Tim is selling "
+"products and John is selling maintenance contracts, they will be assigned to"
+" different teams and will only receive opportunities that make sense to "
+"them."
+msgstr "Cuando se crean equipos de ventas, el siguiente paso es vincular su personal de ventas al equipo para que sean capaces de trabajar en las oportunidades que se supone deben recibir. Por ejemplo, si dentro de su empresa Tim es el encargo de la venta de productos y John es responsable de la  venta de contratos de mantenimiento, ellos serán asignados a diferentes equipos y sólo recibirán oportunidades que tengan sentido para ellos."
+
+#: ../../crm/overview/started/setup.rst:65
+msgid ""
+"In Odoo CRM, you can create a new user on the fly and assign it directly to "
+"a sales team. From the **Dashboard**, click on the button **More** of your "
+"selected sales team, then on **Settings**. Then, under the **Assignation** "
+"section, click on **Create** to add a new salesperson to the team."
+msgstr "En Odoo CRM, puede crear un nuevo usuario sobre la marcha y asignar directamente a un equipo de ventas. Desde el **Tablero**, haga clic en el botón **Más** de su equipo de ventas seleccionado, a continuación en **Configuración**. Luego, en la sección **Asignación**, haga clic en **Crear** para agregar un nuevo vendedor al equipo."
+
+#: ../../crm/overview/started/setup.rst:71
+msgid ""
+"From the **Create: salesman** pop up window (see screenshot below), you can "
+"assign someone on your team:"
+msgstr "Desde la **Creación: Vendedor** aparecerá la ventana (ver imagen abajo), se puede asignar a alguien en su equipo:"
+
+#: ../../crm/overview/started/setup.rst:74
+msgid ""
+"Either your salesperson already exists in the system and you will just need "
+"to click on it from the drop-down list and it will be assigned to the team"
+msgstr "Puede ser que su vendedor ya existe en el sistema y usted sólo tiene que hacer clic en él en la lista desplegable y se le asignará al equipo"
+
+#: ../../crm/overview/started/setup.rst:77
+msgid ""
+"Or you want to assign a new salesperson that doesn't exist into the system "
+"yet - you can do it by creating a new user on the fly from the sales team. "
+"Just enter the name of your new salesperson and click on Create (see below) "
+"to create a new user into the system and directly assign it to your team. "
+"The new user will receive an invite email to set his password and log into "
+"the system. Refer to :doc:`../../salesteam/manage/create_salesperson` for "
+"more information about that process"
+msgstr "O usted desea asignar un nuevo vendedor que no existe en el sistema sin embargo, usted puede hacerlo mediante la creación de un nuevo usuario sobre la marcha del equipo de ventas. Sólo tiene que introducir el nombre de su nuevo vendedor y haga clic en Crear (ver más abajo) para crear un nuevo usuario en el sistema y directamente asignarlo a su equipo. El nuevo usuario recibirá una invitación de correo electrónico para configurar su contraseña y entrar en el sistema. Consulte :doc:`../../salesteam/manage/create_salesperson` Para obtener más información acerca de este proceso."
+
+#: ../../crm/overview/started/setup.rst:90
+msgid "Set up your pipeline"
+msgstr "Configure su flujo de trabajo"
+
+#: ../../crm/overview/started/setup.rst:92
+msgid ""
+"Now that your sales team is created and your salespeople are linked to it, "
+"you will need to set up your pipeline -create the process by which your team"
+" will generate, qualify and close opportunities through your sales cycle. "
+"Refer to the document :doc:`../../salesteam/setup/organize_pipeline` to "
+"define the stages of your pipeline."
+msgstr "Ahora que su equipo de ventas esta creado y sus vendedores están vinculados al mismo, tendrá que configurar su flujo de trabajo, crear el proceso por el que el equipo va a generar, calificar y cerrar las oportunidades a través de su ciclo de ventas. Consulte el documento :doc:`../../salesteam/setup/organize_pipeline` para definir las etapas del flujo de trabajo."
+
+#: ../../crm/overview/started/setup.rst:99
+msgid "Set up incoming email to generate opportunities"
+msgstr "Configuración del nuevo correo electrónico para generar oportunidades"
+
+#: ../../crm/overview/started/setup.rst:101
+msgid ""
+"In Odoo CRM, one way to generate opportunities into your sales team is to "
+"create a generic email address as a trigger. For example, if the personal "
+"email address of your Direct team is `direct@mycompany.example.com "
+"<mailto:direct@mycompany.example.com>`__\\, every email sent will "
+"automatically create a new opportunity into the sales team."
+msgstr "En Odoo CRM, una manera de generar oportunidades en su equipo de ventas es crear una dirección de correo electrónico genérica como un disparador. Por ejemplo, si la dirección de correo electrónico personal de su equipo de directo es `direct@mycompany.example.com <mailto:direct@mycompany.example.com>`__\\, cada correo electrónico enviado creará automáticamente una nueva oportunidad en el equipo de ventas."
+
+#: ../../crm/overview/started/setup.rst:108
+msgid "Refer to the page :doc:`../../leads/generate/emails` to set it up."
+msgstr ""
+
+#: ../../crm/overview/started/setup.rst:111
+msgid "Automate lead assignation"
+msgstr "Automatice la asignación de iniciativas"
+
+#: ../../crm/overview/started/setup.rst:113
+msgid ""
+"If your company generates a high volume of leads every day, it could be "
+"useful to automate the assignation so the system will distribute all your "
+"opportunities automatically to the right department."
+msgstr ""
+
+#: ../../crm/overview/started/setup.rst:117
+msgid ""
+"Refer to the document :doc:`../../leads/manage/automatic_assignation` for "
+"more information."
+msgstr ""
+
+#: ../../crm/reporting.rst:3
+msgid "Reporting"
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:3
+msgid ""
+"How to analyze the sales performance of your team and get customize reports"
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:5
+msgid ""
+"As a manager, you need to constantly monitor your team's performance in "
+"order to help you take accurate and relevant decisions for the company. "
+"Therefore, the **Reporting** section of **Odoo Sales** represents a very "
+"important tool that helps you get a better understanding of where your "
+"company's strengths, weaknesses and opportunities are, showing you trends "
+"and forecasts for key metrics such as the number of opportunities and their "
+"expected revenue over time , the close rate by team or the length of sales "
+"cycle for a given product or service."
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:14
+msgid ""
+"Beyond these obvious tracking sales funnel metrics, there are some other "
+"KPIs that can be very valuable to your company when it comes to judging "
+"sales funnel success."
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:19
+msgid "Review pipelines"
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:21
+msgid ""
+"You will have access to your sales funnel performance from the **Sales** "
+"module, by clicking on :menuselection:`Sales --> Reports --> Pipeline "
+"analysis`. By default, the report groups all your opportunities by stage "
+"(learn more on how to create and customize stage by reading "
+":doc:`../salesteam/setup/organize_pipeline`) and expected revenues for the "
+"current month. This report is perfect for the **Sales Manager** to "
+"periodically review the sales pipeline with the relevant sales teams. Simply"
+" by accessing this basic report, you can get a quick overview of your actual"
+" sales performance."
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:30
+msgid ""
+"You can add a lot of extra data to your report by clicking on the "
+"**measures** icon, such as :"
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:33
+msgid "Expected revenue."
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:35
+msgid "overpassed deadline."
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:37
+msgid ""
+"Delay to assign (the average time between lead creation and lead "
+"assignment)."
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:40
+msgid "Delay to close (average time between lead assignment and close)."
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:42
+msgid "the number of interactions per opportunity."
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:44
+msgid "etc."
+msgstr "etc."
+
+#: ../../crm/reporting/analysis.rst:50
+msgid ""
+"By clicking on the **+** and **-** icons, you can drill up and down your "
+"report in order to change the way your information is displayed. For "
+"example, if I want to see the expected revenues of my **Direct Sales** team,"
+" I need to click on the **+** icon on the vertical axis then on **Sales "
+"Team**."
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:55
+msgid ""
+"Depending on the data you want to highlight, you may need to display your "
+"reports in a more visual view. Odoo **CRM** allows you to transform your "
+"report in just a click thanks to 3 graph views : **Pie Chart**, **Bar "
+"Chart** and **Line Chart**. These views are accessible through the icons "
+"highlighted on the screenshot below."
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:65
+msgid "Customize reports"
+msgstr "Personalizar reportes"
+
+#: ../../crm/reporting/analysis.rst:67
+msgid ""
+"You can easily customize your analysis reports depending on the **KPIs** "
+"(see :doc:`../overview/main_concepts/terminologies`) you want to access. To "
+"do so, use the **Advanced search view** located in the right hand side of "
+"your screen, by clicking on the magnifying glass icon at the end of the "
+"search bar button. This function allows you to highlight only selected data "
+"on your report. The **filters** option is very useful in order to display "
+"some categories of opportunities, while the **Group by** option improves the"
+" readability of your reports according to your needs. Note that you can "
+"filter and group by any existing field from your CRM, making your "
+"customization very flexible and powerful."
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:82
+msgid ""
+"You can save and reuse any customized filter by clicking on **Favorites** "
+"from the **Advanced search view** and then on **Save current search**. The "
+"saved filter will then be accessible from the **Favorites** menu."
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:87
+msgid ""
+"Here are a few examples of customized reports that you can use to monitor "
+"your sales' performances :"
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:91
+msgid "Evaluate the current pipeline of each of your salespeople"
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:93
+msgid ""
+"From your pipeline analysis report, make sure first that the **Expected "
+"revenue** option is selected under the **Measures** drop-down list. Then, "
+"use the **+** and **-** icons and add **Salesperson** and **Stage** to your "
+"vertical axis, and filter your desired salesperson. Then click on the "
+"**graph view** icon to display a visual representation of your salespeople "
+"by stage. This custom report allows you to easily overview the sales "
+"activities of your salespeople."
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:105
+msgid "Forecast monthly revenue by sales team"
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:107
+msgid ""
+"In order to predict monthly revenue and to estimate the short-term "
+"performances of your teams, you need to play with two important metrics : "
+"the **expected revenue** and the **expected closing**."
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:111
+msgid ""
+"From your pipeline analysis report, make sure first that the **Expected "
+"revenue** option is selected under the **Measures** drop-down list. Then "
+"click on the **+** icon from the vertical axis and select **Sales team**. "
+"Then, on the horizontal axis, click on the **+** icon and select **Expected "
+"closing.**"
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:121
+msgid ""
+"In order to keep your forecasts accurate and relevant, make sure your "
+"salespeople correctly set up the expected closing and the expected revenue "
+"for each one of their opportunities"
+msgstr ""
+
+#: ../../crm/reporting/analysis.rst:126
+msgid ":doc:`../salesteam/setup/organize_pipeline`"
+msgstr ":doc:`../salesteam/setup/organize_pipeline`"
+
+#: ../../crm/reporting/review.rst:3
+msgid "How to review my personal sales activities (new sales dashboard)"
+msgstr ""
+
+#: ../../crm/salesteam.rst:3 ../../crm/salesteam/setup.rst:3
+msgid "Sales Team"
+msgstr "Equipos de Ventas"
+
+#: ../../crm/salesteam/manage.rst:3
+msgid "Manage salespeople"
+msgstr "Manejo del personal de ventas"
+
+#: ../../crm/salesteam/manage/create_salesperson.rst:3
+msgid "How to create a new salesperson?"
+msgstr "¿Cómo crear un nuevo vendedor?"
+
+#: ../../crm/salesteam/manage/create_salesperson.rst:6
+msgid "Create a new user"
+msgstr "Crear un nuevo usuario"
+
+#: ../../crm/salesteam/manage/create_salesperson.rst:8
+msgid ""
+"From the Settings module, go to the submenu :menuselection:`Users --> Users`"
+" and click on **Create**. Add first the name of your new salesperson and his"
+" professional email address - the one he will use to log in to his Odoo "
+"instance - and a picture."
+msgstr "Desde el módulo de Configuración, ingresa al submenú :menuselection:`Usuario --> Usuario` y hace clic en **Crear**. Se añade primero el nombre del nuevo vendedor y su correo electrónico profesional o de la empresa, el que usará para iniciar sesión en la instancia de Odoo, así como la imagen del perfil."
+
+#: ../../crm/salesteam/manage/create_salesperson.rst:16
+msgid ""
+"Under \"Access Rights\", you can choose which applications your user can "
+"access and use. Different levels of rights are available depending on the "
+"app. For the Sales application, you can choose between three levels:"
+msgstr "En \"Derechos de Acceso\", se puede elegir las aplicaciones que el usuario tiene acceso y puede utilizar. Los diferentes niveles de derechos están disponibles dependiendo de la aplicación. Para la aplicación de ventas, se puede elegir entre tres niveles:"
+
+#: ../../crm/salesteam/manage/create_salesperson.rst:20
+msgid "**See own leads**: the user will be able to access his own data only"
+msgstr "**Ver sus propias iniciativas**: el usuario únicamente podrá ver sus propios datos"
+
+#: ../../crm/salesteam/manage/create_salesperson.rst:22
+msgid ""
+"**See all leads**: the user will be able to access all records of every "
+"salesman in the sales module"
+msgstr "**Ver todas las iniciativas**: el usuario tiene acceso a todos los registros de todos los vendedores de su módulo"
+
+#: ../../crm/salesteam/manage/create_salesperson.rst:25
+msgid ""
+"**Manager**: the user will be able to access the sales configuration as well"
+" as the statistics reports"
+msgstr "**Gerente**: el usuario será capaz de acceder a la configuración de las ventas, así como a los informes de estadísticas"
+
+#: ../../crm/salesteam/manage/create_salesperson.rst:28
+msgid ""
+"When you're done editing the page and have clicked on **Save**, an "
+"invitation email will automatically be sent to the user, from which he will "
+"be able to log into his personal account."
+msgstr "Cuando haya terminado de editar la página y haya hecho clic en **Guardar**, un correo electrónico de invitación se enviará automáticamente al usuario, desde el cual será capaz de iniciar sesión siendo su cuenta personal."
+
+#: ../../crm/salesteam/manage/create_salesperson.rst:36
+msgid "Register your user into his sales team"
+msgstr "Registro el usuario en su equipo de ventas"
+
+#: ../../crm/salesteam/manage/create_salesperson.rst:38
+msgid ""
+"Your user is now registered in Odoo and can log in to his own session. You "
+"can also add him to the sales team of your choice. From the sales module, go"
+" to your dashboard and click on the **More** button of the desired sales "
+"team, then on **Settings**."
+msgstr "Su usuario está registrado en Odoo y puede conectarse a su propia sesión. También lo puede agregar al equipo de ventas de su elección. Desde el módulo de ventas, vaya a su panel de control y haga clic en el botón **Más** del equipo de ventas deseado, luego en **Configuración**."
+
+#: ../../crm/salesteam/manage/create_salesperson.rst:49
+msgid ""
+"If you need to create a new sales team first, refer to the page "
+":doc:`../setup/create_team`"
+msgstr "Si primero necesita crear un nuevo equipo de ventas, consulte la página :doc:`../setup/create_team`"
+
+#: ../../crm/salesteam/manage/create_salesperson.rst:51
+msgid ""
+"Then, under \"Team Members\", click on **Add** and select the name of your "
+"salesman from the list. The salesperson is now successfully added to your "
+"sales team."
+msgstr "A continuación, en \"Integrantes del equipo\", haga clic en **Agregar** y seleccione el nombre de su vendedor de la lista. El vendedor se ha añadido correctamente a su equipo de ventas."
+
+#: ../../crm/salesteam/manage/create_salesperson.rst:60
+msgid ""
+"You can also add a new salesperson on the fly from your sales team even "
+"before he is registered as an Odoo user. From the above screenshot, click on"
+" \"Create\" to add your salesperson and enter his name and email address. "
+"After saving, the salesperson will receive an invite containing a link to "
+"set his password. You will then be able to define his accesses rights under "
+"the :menuselection:`Settings --> Users` menu."
+msgstr "También se puede agregar un nuevo vendedor sobre la marcha del equipo de ventas, incluso antes de que se haya registrado como usuario Odoo. Desde la captura de pantalla anterior, haga clic en \"Crear\" para añadir a su vendedor y escriba su nombre y correo electrónico. Después de guardar, el vendedor recibirá una invitación que contiene un enlace a establecer su contraseña. A continuación, será capaz de definir sus derechos de acceso bajo el :menuselection:`Settings --> Users` menú."
+
+#: ../../crm/salesteam/manage/create_salesperson.rst:69
+msgid ":doc:`../setup/create_team`"
+msgstr ":doc:`../setup/create_team`"
+
+#: ../../crm/salesteam/setup/create_team.rst:3
+msgid "How to create a new team?"
+msgstr "¿Cómo crear un nuevo equipo de ventas?"
+
+#: ../../crm/salesteam/setup/create_team.rst:5
+msgid ""
+"In the Sales module, your sales teams are accessible from the **Dashboard** "
+"menu. If you start from a new instance, you will find a sales team installed"
+" by default : Direct sales. You can either start using that default sales "
+"team and edit it (refer to the section *Create and Organize your stages* "
+"from the page :doc:`organize_pipeline`) or create a new one from scratch."
+msgstr "En el módulo de ventas, sus equipos de ventas son accesibles desde el menú **Tablero**. Si se inicia desde una nueva instancia, se encuentra un equipo de ventas instalado por defecto: Ventas Directas. Se puede iniciar usando ese equipo de ventas predeterminados y editarlo (consulte la sección *Crear y organizar sus etapas* de la página :doc:`organize_pipeline`) o crear uno nuevo desde cero."
+
+#: ../../crm/salesteam/setup/create_team.rst:12
+msgid ""
+"To create a new team, go to :menuselection:`Configuration --> Sales Teams` "
+"and click on **Create**."
+msgstr "Para crear un nuevo equipo de ventas, ve a la sección :menuselection:`Configuración --> Equipo de Ventas` y haz clic en **Crear**."
+
+#: ../../crm/salesteam/setup/create_team.rst:18
+msgid "Fill in the fields :"
+msgstr "Rellene los campos:"
+
+#: ../../crm/salesteam/setup/create_team.rst:20
+msgid "Enter the name of your team"
+msgstr "Introduzca el nombre del equipo"
+
+#: ../../crm/salesteam/setup/create_team.rst:22
+msgid "Select your team leader"
+msgstr "Seleccione al jefe del equipo"
+
+#: ../../crm/salesteam/setup/create_team.rst:24
+msgid "Select your team members"
+msgstr "Seleccione los integrantes del equipo"
+
+#: ../../crm/salesteam/setup/create_team.rst:26
+msgid ""
+"Don't forget to tick the \"Opportunities\" box if you want to manage "
+"opportunities from it and to click on SAVE when you're done. Your can now "
+"access your new team from your Dashboard."
+msgstr "No olvide marcar la casilla \"Oportunidades\" si usted desea gestionar las oportunidades, y debe dar clic en GUARDAR cuando haya terminado. Ahora usted puede acceder al nuevo equipo de ventas desde el Tablero."
+
+#: ../../crm/salesteam/setup/create_team.rst:35
+msgid ""
+"If you started to work on an empty database and didn't create new users, "
+"refer to the page :doc:`../manage/create_salesperson`."
+msgstr "Si usted empieza a trabajar en una base de datos vacía y no puede crear nuevos usuarios, consulte la página :doc:`../manage/create_salesperson`."
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:3
+msgid "Set up and organize your sales pipeline"
+msgstr "Establecer y organizar el flujo de ventas"
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:5
+msgid ""
+"A well structured sales pipeline is crucial in order to keep control of your"
+" sales process and to have a 360-degrees view of your leads, opportunities "
+"and customers."
+msgstr "Un flujo de ventas bien estructurado es crucial para mantener el control de su proceso de ventas y tener una visión de 360º de sus iniciativas, oportunidades y clientes potenciales."
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:9
+msgid ""
+"The sales pipeline is a visual representation of your sales process, from "
+"the first contact to the final sale. It refers to the process by which you "
+"generate, qualify and close leads through your sales cycle. In Odoo CRM, "
+"leads are brought in at the left end of the sales pipeline in the Kanban "
+"view and then moved along to the right from one stage to another."
+msgstr "El canal de ventas es una representación visual de su proceso de ventas, desde el primer contacto hasta la venta final. Se refiere al proceso mediante el cual se genera, califica y se cierran iniciativas a través del ciclo de ventas. En Odoo CRM, las iniciativas son traídas en el extremo izquierdo del canal de ventas en la vista de Kanban, para después irlos trasladando a las columnas de lado derecho según sea el avance de cada una."
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:16
+msgid ""
+"Each stage refers to a specific step in the sale cycle and specifically the "
+"sale-readiness of your potential customer. The number of stages in the sales"
+" funnel varies from one company to another. An example of a sales funnel "
+"will contain the following stages: *Territory, Qualified, Qualified Sponsor,"
+" Proposition, Negotiation, Won, Lost*."
+msgstr "Cada etapa se refiere a un paso específico en el ciclo de la venta y como se específica cada iniciativa según su estado. El número de etapas se canaliza según la venta, ya que varía de una compañía a otra. Un ejemplo de concretar las ventas sería con las siguientes etapas: *Nuevo, Calificación, Patrocinador Calificado, Propuesta, Negociación, Ganados, Perdidos*."
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:26
+msgid ""
+"Of course, each organization defines the sales funnel depending on their "
+"processes and workflow, so more or fewer stages may exist."
+msgstr "Por supuesto, cada organización define el canal de ventas en función a sus procesos y al flujo de trabajo, por lo que pueden existir más o menos etapas de las ya mencionadas."
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:30
+msgid "Create and organize your stages"
+msgstr "Crear y organizar las etapas"
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:33
+msgid "Add/ rearrange stages"
+msgstr "Añadir y reorganizar las etapas"
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:35
+msgid ""
+"From the sales module, go to your dashboard and click on the **PIPELINE** "
+"button of the desired sales team. If you don't have any sales team yet, you "
+"need to create one first."
+msgstr "Desde el módulo de ventas, vaya al panel de control y haga clic en el botón **FLUJO DE TRABAJO** del equipo de ventas deseado. Si usted no tiene ningún equipo de ventas aún, es necesario crearlo primero."
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:46
+msgid ""
+"From the Kanban view of your pipeline, you can add stages by clicking on "
+"**Add new column.** When a column is created, Odoo will then automatically "
+"propose you to add another column in order to complete your process. If you "
+"want to rearrange the order of your stages, you can easily do so by dragging"
+" and dropping the column you want to move to the desired location."
+msgstr "Desde el punto de vista Kanban de su flujo de trabajo, se pueden agregar etapas haciendo clic en **Añadir nueva columna**. Cuando se crea una columna, Odoo propondrá automáticamente añadir otra columna con el fin de completar su proceso. Si desea cambiar el orden de sus etapas, puede hacerlo fácilmente arrastrando y soltando la columna que desea mover a la ubicación deseada."
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:58
+msgid ""
+"You can add as many stages as you wish, even if we advise you not having "
+"more than 6 in order to keep a clear pipeline"
+msgstr "Puede añadir tantas etapas como desee, aunque le aconsejamos no tener más de 6 con el fin de mantener un flujo de trabajo claro."
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:64
+msgid ""
+"Some companies use a pre qualification step to manage their leads before to "
+"convert them into opportunities. To activate the lead stage, go to "
+":menuselection:`Configuration --> Settings` and select the radio button as "
+"shown below. It will create a new submenu **Leads** under **Sales** that "
+"gives you access to a listview of all your leads."
+msgstr "Algunas empresas utilizan una pre calificación para gestionar a sus iniciativas antes de convertirlos en oportunidades. Para activar el escenario principal, vaya a :menuselection:`Configuración --> Ajustes` y seleccione el botón de radio como se muestra a continuación. Se va a crear un nuevo submenú **Iniciativas** abajo de **Ventas** que le da acceso a una vista de lista de todos sus clientes potenciales."
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:74
+msgid "Set up stage probabilities"
+msgstr "Establecer probabilidades en las etapas"
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:77
+msgid "What is a stage probability?"
+msgstr "¿Cuáles son las probabilidades de las etapas?"
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:79
+msgid ""
+"To better understand what are the chances of closing a deal for a given "
+"opportunity in your pipe, you have to set up a probability percentage for "
+"each of your stages. That percentage refers to the success rate of closing "
+"the deal."
+msgstr "Para entender mejor cuáles son las posibilidades de cerrar un acuerdo para una oportunidad que se encuentra en su flujo, usted tiene que establecer un porcentaje de probabilidad para cada una de sus etapas. Ese porcentaje se refiere a la tasa de éxito de cerrar el trato."
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:84
+msgid ""
+"Setting up stage probabilities is essential if you want to estimate the "
+"expected revenues of your sales cycle"
+msgstr "La configuración de probabilidades de las etapas es esencial si se quiere estimar los ingresos esperados de su ciclo de ventas"
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:88
+msgid ""
+"For example, if your sales cycle contains the stages *Territory, Qualified, "
+"Qualified Sponsor, Proposition, Negotiation, Won and Lost,* then your "
+"workflow could look like this :"
+msgstr "Por ejemplo, si su ciclo de ventas contiene la etapa de Inicio, Calificación, Patrocinador Calificado, la Propuesta, Negociación, Ganado y Perdido, entonces el flujo de trabajo podría tener este aspecto:"
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:92
+msgid ""
+"**Territory** : opportunity just received from Leads Management or created "
+"from a cold call campaign. Customer's Interest is not yet confirmed."
+msgstr "**Inicio** : La oportunidad se recibió de la Administración de Iniciativas o se creo a partir de una campaña. Los intereses del cliente aún no están confirmado."
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:96
+msgid "*Success rate : 5%*"
+msgstr "*Tasa de éxito : 5%*"
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:98
+msgid ""
+"**Qualified** : prospect's business and workflow are understood, pains are "
+"identified and confirmed, budget and timing are known"
+msgstr "**Calificación** : Se conoce el negocio y la perspectiva del flujo de trabajo, las áreas de oportunidad son identificadas y confirmadas, el presupuesto y el tiempo son conocidos."
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:101
+msgid "*Success rate : 15%*"
+msgstr "*Tasa de éxito : 15%*"
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:103
+msgid ""
+"**Qualified sponsor**: direct contact with decision maker has been done"
+msgstr "**Patrocinador Calificado**: existe un contacto directo con la persona encargada de la toma de decisiones."
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:106
+msgid "*Success rate : 25%*"
+msgstr "*Tasa de éxito : 25%*"
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:108
+msgid "**Proposition** : the prospect received a quotation"
+msgstr "**Propuesta** : El prospecto recibe la cotización."
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:110
+msgid "*Success rate : 50%*"
+msgstr "*Tasa de éxito : 50%*"
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:112
+msgid "**Negotiation**: the prospect negotiates his quotation"
+msgstr "**Negociación**: El prospecto evalúa la cotización hecha."
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:114
+msgid "*Success rate : 75%*"
+msgstr "*Tasa de éxito : 75%*"
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:116
+msgid ""
+"**Won** : the prospect confirmed his quotation and received a sales order. "
+"He his now a customer"
+msgstr "**Ganado** : El prospecto confirmó la cotización y se recibe una orden de venta. El prospecto se ha convertido en cliente."
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:119
+msgid "*Success rate : 100%*"
+msgstr "*Tasa de éxito : 100%*"
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:121
+msgid "**Lost** : the prospect is no longer interested"
+msgstr "**Perdidos** : El prospecto no está interesado."
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:123
+msgid "*Success rate : 0%*"
+msgstr "*Tasa de éxito : 0%*"
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:127
+msgid ""
+"Within your pipeline, each stage should correspond to a defined goal with a "
+"corresponding probability. Every time you move your opportunity to the next "
+"stage, your probability of closing the sale will automatically adapt."
+msgstr "Dentro de su flujo de trabajo, cada etapa debe corresponder a un objetivo definido con una probabilidad correspondiente. Cada vez que se mueve su oportunidad a la siguiente etapa, la probabilidad de cierre de la venta se adaptará automáticamente."
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:131
+msgid ""
+"You should consider using probability value as **100** when the deal is "
+"closed-won and **0** for deal closed-lost."
+msgstr "Usted debe considerar el uso de valor de probabilidad como **100** cuando se haya ganado o cerrado el acuerdo y **0** para acuerdo se cerró y está perdido."
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:135
+msgid "How to set up stage probabilities?"
+msgstr "¿Cómo establecer probabilidades en las etapas?"
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:137
+msgid ""
+"To edit a stage, click on the **Settings** icon at the right of the desired "
+"stage then on EDIT"
+msgstr "Para editar las etapas, haga clic en el botón **Configuración** que se encuentra de lado derecho luego en EDITAR."
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:143
+msgid ""
+"Select the Change probability automatically checkbox to let Odoo adapt the "
+"probability of the opportunity to the probability defined in the stage. For "
+"example, if you set a probability of 0% (Lost) or 100% (Won), Odoo will "
+"assign the corresponding stage when the opportunity is marked as Lost or "
+"Won."
+msgstr "Seleccione la casilla del Cambio de probabilidad automático para permitir que Odoo adapte la probabilidad de la oportunidad a la probabilidad definida en la etapa. Por ejemplo, si se establece una probabilidad de 0% (Perdida) o 100% (Ganada), Odoo asignará la etapa correspondiente cuando la oportunidad se marca como Perdida o Ganada."
+
+#: ../../crm/salesteam/setup/organize_pipeline.rst:151
+msgid ""
+"Under the requirements field you can enter the internal requirements for "
+"this stage. It will appear as a tooltip when you place your mouse over the "
+"name of a stage."
+msgstr "En el campo de los requisitos se puede introducir los requisitos internos para esta etapa. Aparecerán como información sobre herramientas al colocar el puntero del ratón sobre el nombre de una etapa."

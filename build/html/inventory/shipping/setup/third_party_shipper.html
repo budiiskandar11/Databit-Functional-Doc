@@ -1,0 +1,168 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to integrate a third party shipper? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Shipping Setup" href="../setup.html" />
+    <link rel="next" title="Shipping Operations" href="../operation.html" />
+    <link rel="prev" title="How to setup a delivery method?" href="delivery_method.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../inventory.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to integrate a third party shipper?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../sales.html" class="internal reference">Sales</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">HRM</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="current toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#install-the-shipper-company-connector-module" class="ripple internal reference">Install the shipper company connector module</a></li><li class="list-group-item"><a href="#configure-the-delivery-method" class="ripple internal reference">Configure the delivery method</a></li><li class="list-group-item"><a href="#company-configuration" class="ripple internal reference">Company configuration</a></li><li class="list-group-item"><a href="#product-configuration" class="ripple internal reference">Product configuration</a></li></ul></li><li class="list-group-item"><a href="#sale-process" class="ripple internal reference">Sale process</a><ul ><li class="list-group-item"><a href="#sale-order" class="ripple internal reference">Sale order</a></li><li class="list-group-item"><a href="#delivery" class="ripple internal reference">Delivery</a></li></ul></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/inventory/shipping/setup/third_party_shipper.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-integrate-a-third-party-shipper"></section><section id="overview"><h2 >Overview</h2><p >Odoo can handle various delivery methods, including third party
+shippers. Odoo can be linked with the transportation company tracking
+system. It will allow you to manage the transport company, the real
+prices and the destination.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="install-the-shipper-company-connector-module"><h3 >Install the shipper company connector module</h3><p >In the inventory module, click on <span class="menuselection">Configuration ‣ Settings</span>.
+Under <strong >Shipping Connectors</strong>, flag the transportation companies you want to
+integrate :</p><img src="../../../_images/third_party_shipper06.png" class="img-responsive center-block"><p >Then click on <strong >Apply</strong>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you want to integrate delivery methods in your e-commerce,
+you'll have to install the <strong >eCommerce Delivery</strong> module.</p></div></section><section id="configure-the-delivery-method"><h3 >Configure the delivery method</h3><p >To configure your delivery methods, go to the <strong >Inventory</strong> module, click on
+<span class="menuselection">Configuration ‣ Delivery Methods</span>.</p><p >The delivery methods for the chosen shippers have been automatically
+created. Most of the time, there will be <strong >2</strong> delivery methods for the same
+provider: one for <strong >international</strong> shipping and the other for <strong >domestic</strong>
+shipping.</p><p >You can create other methods with the same provider with other
+configuration, for example the <strong >Packaging Type</strong>.</p><p >You can change the <strong >Name</strong> of the delivery method. This is the name that
+will appear on your ecommerce.</p><p >Flag <strong >Shipping enabled</strong> when you are ready to use it.</p><img src="../../../_images/third_party_shipper02.png" class="img-responsive center-block"><p >In the pricing tab, the name of the provider chosen under the <strong >Price computation</strong>
+means that the pricing will be computed by the shipper system.</p><p >The configuration of the shipper is split into two columns:</p><ul ><li >The first one is linked to <strong >your account</strong> (developer key, password,...).
+For more information, please refer to the provider website.</li><li >The second column varies according to the <strong >provider</strong>. You can choose
+the packaging type, the service type, the weight unit...</li><li >Uncheck <strong >Test Mode</strong> when you are done with the testings.</li></ul><p >Finally you can limit the delivery method to a few destinations. You can
+limit it to some countries, states or even zip codes. This feature
+limits the list of countries on your e-commerce. It is useful for the
+domestic providers. For example, USPS US only delivers from the United
+States to the United States.</p><img src="../../../_images/third_party_shipper07.png" class="img-responsive center-block"></section><section id="company-configuration"><h3 >Company configuration</h3><p >In order to compute the right price, the provider needs your company
+information. Be sure your address and phone number are correctly
+encoded.</p><img src="../../../_images/third_party_shipper03.png" class="img-responsive center-block"><p >To check your information, go to the <strong >Settings</strong> application and click on
+<strong >General Settings</strong>. Click on the first link <strong >Configure your company data</strong>.</p></section><section id="product-configuration"><h3 >Product configuration</h3><p >The shipper companies need the weight of your product, otherwise the
+price computation cannot be done.</p><p >Go the menu <span class="menuselection">Sales ‣ Sales ‣ Products</span>. Open the products you
+want to ship and set a weight on it.</p><img src="../../../_images/third_party_shipper09.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >The weight on the product form is expressed in kilograms.
+Don't forget to make the conversion if you are used to the imperial
+measurement system.</p></div></section><section id="sale-process"><h2 >Sale process</h2></section><section id="sale-order"><h3 >Sale order</h3><img src="../../../_images/third_party_shipper05.png" class="img-responsive center-block"><p >You can now choose the carrier on your sale order. Click on <strong >Delivery
+method</strong> to choose the right one.</p><p >The price is computed when you save the sale order or when you click on
+<strong >Set price</strong>.</p><p >If you want to invoice the price of the delivery charge on the sale
+order, click on <strong >Set price</strong>, it will add a line with the name of the
+delivery method as a product. It may vary from the real price.</p><p >Otherwise, the real price (computed when the delivery is validated) will
+automatically be added to the invoice. For more information, please read
+the document <a href="../operation/invoicing.html" class="internal reference"><em >How to invoice the shipping cost to the customer?</em></a></p></section><section id="delivery"><h3 >Delivery</h3><p >The delivery created from the sale order will take the shipping
+information from it. You can change the carrier if you want to.</p><p >If you create a delivery transfer from the inventory module, you can add
+the third party shipper in the additional info tab.</p><img src="../../../_images/third_party_shipper01.png" class="img-responsive center-block"><p >The weight is computed based on the products weights. The shipping cost
+will be computed once the transfer is validated.</p><p >Click on <strong >Validate</strong> to receive the tracking number. The <strong >Carrier Tracking
+ref</strong> field will automatically be filled. Click on the <strong >Tracking</strong> button
+to check your delivery on the provider website.</p><img src="../../../_images/third_party_shipper08.png" class="img-responsive center-block"><p >The label to stick on your package is available in the history
+underneath :</p><img src="../../../_images/third_party_shipper04.png" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="../operation/invoicing.html" class="internal alert-link reference"><em >How to invoice the shipping cost to the customer?</em></a></li><li ><a href="../operation/labels.html" class="internal alert-link reference"><em >How to print shipping labels?</em></a></li></ul></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,188 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Terminologies &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Main Concepts" href="../concepts.html" />
+    <link rel="next" title="Getting Started" href="../start.html" />
+    <link rel="prev" title="Double-Entry Inventory Management" href="double-entry.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../inventory.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              Terminologies
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../sales.html" class="internal reference">Sales</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">HRM</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="current toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul ></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/inventory/overview/concepts/terminologies.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="terminologies"><ul ><li ><strong >Warehouse</strong>: A warehouse in Odoo is a location where you store
+products. It is either a physical or a virtual warehouse. It
+could be a store or a repository.</li><li ><strong >Location</strong>: Locations are used to structure storage zones within a
+warehouse. In addition to internal locations (your warehouse),
+Odoo has locations for suppliers, customers, inventory loss
+counter-parts, etc.</li><li ><strong >Lots</strong>: Lots are a batch of products identified with a unique
+barcode or serial number. All items of a lot are from the same
+product. (e.g. a set of 24 bottle) Usually, lots come from
+manufacturing order batches or procurements.</li><li ><strong >Serial Number</strong>: A serial number is a unique identifier of a
+specific product. Technically, serial numbers are similar to
+having a lot of 1 unique item.</li><li ><strong >Unit of Measure</strong>: Define how the quantity of products is
+expressed. Meters, Pounds, Pack of 24, Kilograms,… Unit of
+measure of the same category (ex: size) can be converted to each
+others (m, cm, mm) using a fixed ratio.</li><li ><strong >Consumable</strong>: A product for which you do not want to manage the
+inventory level (no quantity on hand or forecasted) but that you
+can receive and deliver. When this product is needed Odoo suppose
+that you always have enough stock.</li><li ><strong >Stockable</strong>: A product for which you want to manage the inventory
+level.</li><li ><strong >Package:</strong> A package contains several products (identified by their
+serial number/lots or not). Example: a box containing knives and
+forks.</li><li ><strong >Procurement</strong>: A procurement is a request for a specific quantity
+of products to a specific location. Procurement are automatically
+triggered by other documents: Sale orders, Minimum Stock Rules,
+and Procurement rules. You can trigger the procurement manually.
+When procurements are triggered automatically, you should always
+pay attention for the exceptions (e.g. a product should be
+purchased from a vendor, but no supplier is defined).</li><li ><strong >Routes</strong>: Routes define paths the product must follow. Routes may
+be applicable or not, depending on the products, sales order
+lines, warehouse,… To fulfill a procurement, the system will
+search for rules belonging to routes that are defined in the
+related product/sale order.</li><li ><strong >Push Rules</strong>: Push rules trigger when products enter a specific
+location. They automatically move the product to a new location.
+Whether a push rule can be used depends on applicable routes.</li><li ><strong >Procurement Rules</strong> or <strong >Pull Rules</strong>: Procurement rules describe
+how procurements on specific locations should be fulfilled e.g.:
+where the product should come from (source location), whether the
+procurement is MTO or MTS,...</li><li ><strong >Procurement Group</strong>: Routes and rules define inventory moves. For
+every rule, a document type is provided: Picking, Packing,
+Delivery Order, Purchase Order,… Moves are grouped within the
+same document type if their procurement group and locations are
+the same.</li><li ><strong >Stock Moves</strong>: Stock moves represent the transit of goods and
+materials between locations.</li><li ><strong >Quantity On Hand</strong>: The quantity of a specific product that is
+currently in a warehouse or location.</li><li ><strong >Forecasted Quantity</strong>: The quantity of products you can sell for a
+specific warehouse or location. It is defined as the Quantity on
+Hand - Future Delivery Orders + Future incoming shipments +
+Future manufactured units.</li><li ><strong >Reordering Rules</strong>: It defines the conditions for Odoo to
+automatically trigger a request for procurement (buying at a
+supplier or launching a manufacturing order). It is triggered
+when the forecasted quantity meets the minimum stock rule.</li><li ><strong >Cross-Dock</strong>: Cross-docking is a practice in the logistics of
+unloading materials from an incoming semi-trailer truck or
+railroad car and loading these materials directly into outbound
+trucks, trailers, or rail cars, with no storage in between. (does
+not go to the stock, directly from incoming to packing zone)</li><li ><strong >Drop-Shipping</strong>: move products from the vendor/manufacturer
+directly to the customer (could be retailer or consumer) without
+going through the usual distribution channels. Products are sent
+directly from the vendor to the customer, without passing through
+your own warehouse.</li><li ><strong >Removal Strategies</strong>: the strategy to use to select which product
+to pick for a specific operation. Example: FIFO, LIFO, FEFO.</li><li ><strong >Putaway Strategies</strong>: the strategy to use to decide in which
+location a specific product should be set when arriving
+somewhere. (example: cables goes in rack 3, storage A)</li><li ><strong >Scrap</strong>: A product that is broken or outdated. Scrapping a product
+removes it from the stock.</li></ul></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Register bank statements manually &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Bank Feeds" href="../feeds.html" />
+    <link rel="next" title="Miscellaneous" href="../misc.html" />
+    <link rel="prev" title="How to synchronize your PayPal account with Odoo?" href="paypal.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../accounting.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              Register bank statements manually
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="current toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../sales.html" class="internal reference">Sales</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">HRM</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#id1" class="ripple internal reference">Register bank statements manually</a><ul ><li class="list-group-item"><a href="#create-your-bank-statements" class="ripple internal reference">Create your Bank Statements</a></li><li class="list-group-item"><a href="#reconcile-your-bank-statements" class="ripple internal reference">Reconcile your Bank Statements</a></li><li class="list-group-item"><a href="#close-bank-statements-from-the-reconciliation" class="ripple internal reference">Close Bank Statements from the reconciliation</a></li><li class="list-group-item"><a href="#close-bank-statements" class="ripple internal reference">Close Bank Statements</a></li></ul></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/accounting/bank/feeds/manual.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="register-bank-statements-manually"></section><section id="overview"><h2 >Overview</h2><p >With Odoo, you can import your bank statements, synchronize with your
+bank but also register your bank statements manually.</p></section><section id="configuration"><h2 >Configuration</h2><p >No special configuration is necessary to register invoices. All you need
+to do is install the accounting app.</p><img src="../../../_images/manual01.png" class="img-responsive center-block"></section><section id="id1"><h2 >Register bank statements manually</h2></section><section id="create-your-bank-statements"><h3 >Create your Bank Statements</h3><p >In the Dashboard, click on the button <strong >New Statement</strong> related to the
+bank journal. If some reconciliations need to be done, the New Statement
+link will be found underneath.</p><img src="../../../_images/manual02.png" class="img-responsive center-block"><p >Just fill in the fields according the the information written on your
+bank statement. The reference can be filled in manually or you can leave
+it empty. We recommend to fill in the partner to ease the reconciliation
+process.</p><p >The difference between the starting balance and the ending balance
+should be equal to the computed balance.</p><img src="../../../_images/manual03.png" class="img-responsive center-block"><p >When you are done, click on <strong >Save</strong>.</p></section><section id="reconcile-your-bank-statements"><h3 >Reconcile your Bank Statements</h3><p >You can choose to directly reconcile the statement by clicking on the
+button <img src="../../../_images/manual04.png" alt="manual04" class="img-responsive"></p><p >You can also start the reconciliation process from the dashboard by
+clicking on <strong >Reconcile # Items</strong>.</p><img src="../../../_images/manual05.png" class="img-responsive center-block"><p >Click on <strong >Validate</strong> to reconcile your bank statement. If the partner
+is missing, Odoo will ask you to <strong >select a partner</strong>.</p><img src="../../../_images/manual06.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >Hit CTRL-Enter to reconcile all the balanced items on the sheets.</p></div></section><section id="close-bank-statements-from-the-reconciliation"><h3 >Close Bank Statements from the reconciliation</h3><p >If the balance is correct, you can directly close the statement from the
+reconciliation by clicking on <img src="../../../_images/manual07.png" alt="manual07" class="img-responsive">.</p><p >Otherwise, click on <img src="../../../_images/manual08.png" alt="manual08" class="img-responsive"> to open the statement and correct the
+issue.</p></section><section id="close-bank-statements"><h3 >Close Bank Statements</h3><p >On the accounting dashboard, click on the More button of your bank
+journal, then click on Bank Statements.</p><img src="../../../_images/manual09.png" class="img-responsive center-block"><p >To close the bank statement, just click on <strong >Validate</strong>.</p><img src="../../../_images/manual10.png" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="../reconciliation/use_cases.html" class="internal alert-link reference"><em >Use cases in the bank reconciliation process?</em></a></li><li ><a href="synchronize.html" class="internal alert-link reference"><em >How to synchronize Odoo with your bank?</em></a></li></ul></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

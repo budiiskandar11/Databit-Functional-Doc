@@ -1,0 +1,150 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to use different units of measure? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Products" href="../products.html" />
+    <link rel="next" title="Using product variants" href="variants.html" />
+    <link rel="prev" title="Products" href="../products.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../inventory.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to use different units of measure?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../sales.html" class="internal reference">Sales</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">HRM</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="current toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#setting-up-units-on-your-products" class="ripple internal reference">Setting up units on your products</a></li><li class="list-group-item"><a href="#transfer-from-one-unit-to-another" class="ripple internal reference">Transfer from one unit to another</a><ul ><li class="list-group-item"><a href="#procurement" class="ripple internal reference">Procurement</a></li><li class="list-group-item"><a href="#quality-control" class="ripple internal reference">Quality Control</a></li><li class="list-group-item"><a href="#delivery-process" class="ripple internal reference">Delivery process</a></li></ul></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/inventory/settings/products/uom.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-use-different-units-of-measure"></section><section id="overview"><h2 >Overview</h2><p >In some cases, handling products in different unit of measures is
+necessary. For example, if you buy products in a country where the
+metric system is of application and sell the in a country where the
+imperial system is used, you will need to convert the units.</p><p >You can set up Odoo to work with different units of measure for one
+product.</p></section><section id="configuration"><h2 >Configuration</h2><p >In the <strong >Inventory</strong> application, go to <span class="menuselection">Configuration ‣ Settings</span>.
+In the <strong >Products</strong> section, select <strong >Some products may be sold/purchased in
+different units of measure (advanced)</strong>, then click on <strong >Apply</strong>.</p><img src="../../../_images/uom09.png" class="img-responsive center-block"></section><section id="setting-up-units-on-your-products"><h2 >Setting up units on your products</h2><p >In <span class="menuselection">Inventory Control ‣ Products</span>, open the product which you would like to
+change the purchase/sale unit of measure, and click on <strong >Edit</strong>.</p><p >In the <strong >Unit of Measure</strong> section, select the unit in which the product
+will be sold and in which internal transfers will be done.</p><p >In the <strong >Purchase Unit of Measure</strong> section, select the unit in which
+you purchase the product. When you're done, click on <strong >Save</strong>.</p><img src="../../../_images/uom10.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >Click on the edit button <img src="../../../_images/uom07.png" alt="edit" class="img-responsive"> to create new unit of measures.</p></div></section><section id="transfer-from-one-unit-to-another"><h2 >Transfer from one unit to another</h2><p >When doing inter-unit transfers, the rounding is automatically done by
+Odoo.</p><p >The unit of measure can be changed throughout the whole process. The
+only condition is that the unit of measure is part of the same category.</p><p >In this example, we are in the egg business :</p><ul ><li >We buy eggs by trays (30 eggs)</li><li >We check all eggs individually when receiving it (quality control)</li><li >We sell eggs by the dozen to the customers</li></ul><img src="../../../_images/uom01.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >The <strong >Sale price</strong> is expressed in the <strong >Product unit of measure</strong>. The
+<strong >Cost price</strong> is expressed in the <strong >Purchase Unit of Measure</strong>.</p></div><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >All internal transfers are expressed in the <strong >Product Unit of
+Measure</strong>.</p></div></section><section id="procurement"><h3 >Procurement</h3><p >When doing your procurement request, you can still change the unit of
+measure.</p><img src="../../../_images/uom06.png" class="img-responsive center-block"><p >The unit of measure can also be changed in the purchase order :</p><img src="../../../_images/uom03.png" class="img-responsive center-block"></section><section id="quality-control"><h3 >Quality Control</h3><p >The quality control is done by unit.</p><p >The basic unit of measure of our product is <strong >Unit</strong>. Therefore the
+quality check is done by unit.</p><img src="../../../_images/uom05.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >The unit of measure can only be changed when the transfer status
+is <strong >Draft</strong>.</p></div></section><section id="delivery-process"><h3 >Delivery process</h3><p >The eggs are sold by the dozen. You can choose the unit of measure on
+the sale order document. When doing it, the price is automatically
+computed from the unit to the dozen.</p><img src="../../../_images/uom04.png" class="img-responsive center-block"><p >In the delivery order, the initial demand is done in the sales order unit
+of measure :</p><img src="../../../_images/uom02.png" class="img-responsive center-block"><p >But the transfer is done in the product unit of measure. Everything is
+converted automatically :</p><img src="../../../_images/uom08.png" class="img-responsive center-block"></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

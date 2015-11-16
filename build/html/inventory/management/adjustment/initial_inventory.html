@@ -1,0 +1,156 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to make the initial inventory? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Inventory Adjustment" href="../adjustment.html" />
+    <link rel="next" title="How to choose between minimum stock rule and make to order?" href="min_stock_rule_vs_mto.html" />
+    <link rel="prev" title="Inventory Adjustment" href="../adjustment.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../inventory.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to make the initial inventory?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../sales.html" class="internal reference">Sales</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">HRM</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="current toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#product-configuration" class="ripple internal reference">Product Configuration</a></li><li class="list-group-item"><a href="#start-the-initial-inventory" class="ripple internal reference">Start the initial inventory</a><ul ><li class="list-group-item"><a href="#update-the-product-quantity-for-one-product" class="ripple internal reference">Update the product quantity for one product</a></li><li class="list-group-item"><a href="#multiple-products-at-once" class="ripple internal reference">Multiple products at once</a></li></ul></li><li class="list-group-item"><a href="#reporting" class="ripple internal reference">Reporting</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/inventory/management/adjustment/initial_inventory.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-make-the-initial-inventory"><p >One of the most important feature in an warehouse management software is
+to keep the inventory right.</p><p >Once your products have been defined, it is time to make your initial
+inventory. You will reflect reality by inventorying the right quantities
+in the right locations.</p></section><section id="product-configuration"><h2 >Product Configuration</h2><p >In the Inventory module, open the <span class="menuselection">Inventory Control ‣ Products</span>,
+then click on <strong >Create</strong> to create a new product. Configure the
+product type so that it is <strong >Stockable</strong> and not a consumable.</p><img src="../../../_images/initial01.png" class="img-responsive center-block"></section><section id="start-the-initial-inventory"><h2 >Start the initial inventory</h2></section><section id="update-the-product-quantity-for-one-product"><h3 >Update the product quantity for one product</h3><p >In the product you just created, you can see in the upper tiles that we
+have 0 product On Hand. Click on the <strong >Update qty on Hand</strong> button.</p><p >A new window opens. In the <strong >New Quantity on Hand</strong> field, type the
+quantity of product you currently hold in stock, then click on <strong >Apply</strong>.</p><img src="../../../_images/initial02.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >if you are using multiple locations for your warehouse, you will
+be able to set the location of your product from this screen.</p></div><p >You can now see from the On Hand tab that the quantity has been updated.</p><img src="../../../_images/initial03.png" class="img-responsive center-block"><p >Now, if you check the <strong >Inventory Adjustments</strong> in the <strong >Inventory Control</strong>
+menu, you will see that a new line named &quot;INV: (name of your product)&quot; has
+automatically been created and validated by the system.</p><img src="../../../_images/initial04.png" class="img-responsive center-block"></section><section id="multiple-products-at-once"><h3 >Multiple products at once</h3><p >Create all the products for which you want to follow the stock (as
+stockable products). Once the required products in stock have been
+defined, use an initial inventory operation to put the current
+quantities into the system by location. Go to <span class="menuselection">Inventory Control ‣
+Inventory Adjustments</span> to start your initial inventory.</p><p >Give it a name (for example Initial Inventory) and select the stock
+location of your inventory. Note that when you select a parent location
+(such as Stock, which might be split into sub locations), you can also
+select the sub (or child) locations.</p><img src="../../../_images/initial05.png" class="img-responsive center-block"><p >You can choose between making an inventory for all products, for a few
+or only for one. In this case, we choose the <strong >All products</strong> option.</p><img src="../../../_images/initial06.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >If you need your stock valuation to be done in a different period
+than the one that will be selected by default according to the inventory
+end date, enter the corresponding accounting period in the Force
+Valuation Period field. The accounting module needs to be installed.</p></div><p >Click the <strong >Start Inventory</strong> button. Depending on the type of inventory you
+have chosen (all products or selected ones) you might have to add
+products manually by clicking on <strong >Add an item</strong>.</p><p >Add the <strong >Real Quantity</strong> that you have in your stock for each product.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >additional information will be available according to the options
+you activated (multi-locations, serial number, consignee stocks).</p></div><img src="../../../_images/initial07.png" class="img-responsive center-block"><p >Click the <strong >Validate Inventory</strong> button to confirm the inventory and post
+it.</p></section><section id="reporting"><h2 >Reporting</h2><p >To check the current stock, go to <span class="menuselection">Inventory Control ‣ Products</span>,
+and click on the <strong >list button</strong>:</p><img src="../../../_images/initial08.png" class="img-responsive center-block"></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

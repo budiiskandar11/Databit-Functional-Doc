@@ -1,0 +1,5 @@
+:banner: banners/start.jpg
+
+============
+Base Setting
+============

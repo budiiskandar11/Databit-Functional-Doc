@@ -1,0 +1,163 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>From procurement to delivery &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Process Overview" href="../process.html" />
+    <link rel="next" title="Settings" href="../../settings.html" />
+    <link rel="prev" title="Process Overview" href="../process.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../inventory.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              From procurement to delivery
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../sales.html" class="internal reference">Sales</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">HRM</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="current toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#how-to-process-a-receipt" class="ripple internal reference">How to process a receipt ?</a><ul ><li class="list-group-item"><a href="#install-purchase-application" class="ripple internal reference">Install Purchase application</a></li><li class="list-group-item"><a href="#make-a-purchase-order" class="ripple internal reference">Make a purchase order</a></li><li class="list-group-item"><a href="#retrieve-the-receipt" class="ripple internal reference">Retrieve the Receipt</a><ul ><li class="list-group-item"><a href="#from-the-purchase-order" class="ripple internal reference">From the purchase order</a></li><li class="list-group-item"><a href="#from-the-inventory-dashboard" class="ripple internal reference">From the Inventory Dashboard</a></li></ul></li><li class="list-group-item"><a href="#process-the-receipt" class="ripple internal reference">Process the Receipt</a></li></ul></li><li class="list-group-item"><a href="#how-to-process-a-delivery-order" class="ripple internal reference">How to process a delivery order ?</a><ul ><li class="list-group-item"><a href="#install-sales-application" class="ripple internal reference">Install Sales application</a></li><li class="list-group-item"><a href="#place-a-sale-order" class="ripple internal reference">Place a sale order</a></li><li class="list-group-item"><a href="#retrieve-the-delivery-order" class="ripple internal reference">Retrieve the Delivery order</a><ul ><li class="list-group-item"><a href="#from-the-sale-order" class="ripple internal reference">From the sale order</a></li><li class="list-group-item"><a href="#id1" class="ripple internal reference">From the Inventory Dashboard</a></li></ul></li><li class="list-group-item"><a href="#process-the-delivery" class="ripple internal reference">Process the delivery</a></li></ul></li><li class="list-group-item"><a href="#advanced-flows" class="ripple internal reference">Advanced flows</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/inventory/overview/process/sale_to_delivery.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="from-procurement-to-delivery"></section><section id="overview"><h2 >Overview</h2><p >Inventory is the heart of your business. It can be really complicated,
+but with Odoo, doing a receipt or a delivery has never been easier. We
+will show you in this document how easy to do a full process, from the
+receipt to the delivery.</p><p >Odoo inventory is fully integrated with other applications, such as
+<strong >Purchase</strong>, <strong >Sales</strong> or <strong >Inventory</strong>. But is not limited to those processes, it
+is also fully integrated with our <strong >e-Commerce</strong>, <strong >Manufacturing</strong> and <strong >Repairs</strong>
+applications.</p></section><section id="how-to-process-a-receipt"><h2 >How to process a receipt ?</h2></section><section id="install-purchase-application"><h3 >Install Purchase application</h3><p >First, you will need to install the <strong >Purchase Management</strong> application. Go
+to <span class="menuselection">Apps</span> and install it.</p><img src="../../../_images/sale_to_delivery01.png" class="img-responsive center-block"></section><section id="make-a-purchase-order"><h3 >Make a purchase order</h3><p >Go to the <strong >Purchases</strong> applications. The first screen is the <strong >Request for
+Quotation</strong> list. Click on the <strong >Create</strong> button.</p><p >Fill in the <strong >Vendor</strong> information and click on <strong >Add an Item</strong> to add some
+products to your request for quotation.</p><img src="../../../_images/sale_to_delivery02.png" class="img-responsive center-block"><p >Click on <strong >Confirm order</strong> when you are sure about the products, prices
+and quantity.</p></section><section id="retrieve-the-receipt"><h3 >Retrieve the Receipt</h3><p >You can retrieve the receipt order in 2 ways:</p></section><section id="from-the-purchase-order"><h4 >From the purchase order</h4><p >On the top right of your purchase order, you will see a button with the
+related <strong >Receipt</strong>:</p><img src="../../../_images/sale_to_delivery03.png" class="img-responsive center-block"><p >Click on it to see the <strong >Transfer order</strong>.</p></section><section id="from-the-inventory-dashboard"><h4 >From the Inventory Dashboard</h4><p >When opening the <strong >Inventory</strong> application, click on <strong ># to receive</strong> to see
+the list of your receipts to process.</p><img src="../../../_images/sale_to_delivery04.png" class="img-responsive center-block"><p >In the list, click on the one related to the purchase order:</p><img src="../../../_images/sale_to_delivery05.png" class="img-responsive center-block"></section><section id="process-the-receipt"><h3 >Process the Receipt</h3><img src="../../../_images/sale_to_delivery06.png" class="img-responsive center-block"><p >To process the stock transfer. Simply click on <strong >Validate</strong> to complete
+the transfer. A message will appear asking if you want to process the
+whole order, accept it by clicking on <strong >Apply</strong>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Procurements can be automated. Please read our document
+<a href="../../management/adjustment/min_stock_rule_vs_mto.html" class="internal alert-link reference"><em >How to choose between minimum stock rule and make to order?</em></a>
+for more information.</p></div></section><section id="how-to-process-a-delivery-order"><h2 >How to process a delivery order ?</h2></section><section id="install-sales-application"><h3 >Install Sales application</h3><p >First, you will need to install the <strong >Sales Management</strong> application. Go to
+<span class="menuselection">Apps</span> and install it.</p><img src="../../../_images/sale_to_delivery07.png" class="img-responsive center-block"></section><section id="place-a-sale-order"><h3 >Place a sale order</h3><p >Go to the <strong >Sales</strong> applications. Click on the <strong >Quotations</strong> button of your
+team.</p><img src="../../../_images/sale_to_delivery08.png" class="img-responsive center-block"><p >You will get the list of all your quotations. Click on the <strong >Create</strong>
+button.</p><p >Fill in the <strong >Customer informations</strong> and click on <strong >Add an Item</strong> to add
+some products to your quotation.</p><img src="../../../_images/sale_to_delivery09.png" class="img-responsive center-block"><p >Click on <strong >Confirm sale</strong> to place the order.</p></section><section id="retrieve-the-delivery-order"><h3 >Retrieve the Delivery order</h3><p >You can retrieve the delivery order in 2 ways:</p></section><section id="from-the-sale-order"><h4 >From the sale order</h4><p >On the top right of your sale order, you will see a button with the
+related <strong >Delivery</strong>:</p><img src="../../../_images/sale_to_delivery10.png" class="img-responsive center-block"><p >Click on it to see the <strong >Transfer order</strong>.</p></section><section id="id1"><h4 >From the Inventory Dashboard</h4><p >When opening the <strong >Inventory</strong> application, click on <strong ># to do</strong> to see the
+list of your receipts to process.</p><img src="../../../_images/sale_to_delivery11.png" class="img-responsive center-block"><p >In the list, click on the one related to the sale order:</p><img src="../../../_images/sale_to_delivery12.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If the product is not in stock, the sale order will be listed as
+<strong >Waiting</strong> on your dashboard.</p></div></section><section id="process-the-delivery"><h3 >Process the delivery</h3><img src="../../../_images/sale_to_delivery12.png" class="img-responsive center-block"><p >To process the stock transfer. Simply click on <strong >Vaidate</strong> to complete
+the transfer. A message will appear asking if you want to process the
+whole order, accept it by clicking on <strong >Apply</strong>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >E-Commerce orders are processed the same way.</p></div><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >You can easily integrate your delivery orders with different
+delivery methods. Please read the document
+<a href="../../shipping/setup/delivery_method.html" class="internal alert-link reference"><em >How to setup a delivery method?</em></a>.</p></div></section><section id="advanced-flows"><h2 >Advanced flows</h2><p >In this document, the flows that are explained are the most simple ones.
+Odoo also suit for companies having advanced warehouse management.</p><ul ><li >By default, only <strong >receipts</strong> and <strong >deliveries</strong> are configured but you can
+activate the use of multi-locations and multi-warehouses to do
+<strong >internal transfers</strong>.</li><li ><strong >Routes</strong>: you can automate flows with push and pull rules</li><li ><strong >Multi-step</strong> receipts and deliveries can be easily configured for each
+warehouse</li><li >Much more: <strong >Barcode scanning</strong>, <strong >serial numbers</strong>, <strong >lots</strong>, <strong >cross-docking</strong>,
+<strong >dropshipping</strong>, integration with a <strong >third-party</strong> shipper, <strong >putaway</strong> and
+<strong >removal</strong> strategies.... All of it is possible with Odoo.</li></ul></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to use routes? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Concepts" href="../concepts.html" />
+    <link rel="next" title="What is a procurement rule?" href="procurement_rule.html" />
+    <link rel="prev" title="Concepts" href="../concepts.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../inventory.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to use routes?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../sales.html" class="internal reference">Sales</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">HRM</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="current toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#pre-configured-routes" class="ripple internal reference">Pre-configured routes</a></li><li class="list-group-item"><a href="#custom-routes" class="ripple internal reference">Custom Routes</a><ul ><li class="list-group-item"><a href="#routes-applied-on-warehouses" class="ripple internal reference">Routes applied on warehouses</a></li><li class="list-group-item"><a href="#routes-applied-on-products" class="ripple internal reference">Routes applied on products</a></li><li class="list-group-item"><a href="#routes-applied-on-product-category" class="ripple internal reference">Routes applied on Product Category</a></li><li class="list-group-item"><a href="#routes-applied-on-sales-order-lines" class="ripple internal reference">Routes applied on Sales Order lines</a></li></ul></li><li class="list-group-item"><a href="#procurement-and-push-rules" class="ripple internal reference">Procurement and push rules</a></li><li class="list-group-item"><a href="#procurement-configuration" class="ripple internal reference">Procurement configuration</a></li><li class="list-group-item"><a href="#make-to-order-route" class="ripple internal reference">Make-to-Order Route</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/inventory/routes/concepts/use_routes.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-use-routes"></section><section id="overview"><h2 >Overview</h2><p >A route is a collection of procurement rules and push rules. Odoo can
+manage advanced push/pull routes configuration, for example:</p><ul ><li >Manage product manufacturing chains</li><li >Manage default locations per product</li><li >Define routes within your warehouse according to business needs, such
+as quality control, after sales services or supplier returns</li><li >Help rental management, by generating automated return moves for
+rented products</li></ul></section><section id="configuration"><h2 >Configuration</h2><p >Procurement rules are part of the routes. Go to the <strong >Inventory</strong>
+application, <span class="menuselection">Configuration ‣ Settings</span> and tick
+<strong >Advance routing of products using rules</strong>.</p><img src="../../../_images/use_routes01.png" class="img-responsive center-block"></section><section id="pre-configured-routes"><h2 >Pre-configured routes</h2><p >Odoo has some pre-configured routes for your warehouses.</p><p >In the Inventory application, go to
+<span class="menuselection">Configuration ‣ Warehouses</span>.</p><p >In the <strong >Warehouse Configuration</strong> tab, <strong >Incoming Shipments</strong> and <strong >Outgoing
+Shippings</strong> options set some routes according to your choices.</p><img src="../../../_images/use_routes02.png" class="img-responsive center-block"></section><section id="custom-routes"><h2 >Custom Routes</h2><p >In the <strong >Inventory</strong> application, go to
+<span class="menuselection">Configuration ‣ Routes</span>.</p><img src="../../../_images/use_routes03.png" class="img-responsive center-block"><p >First, you have to select the places where this route can be selected.
+You can combine several choices.</p></section><section id="routes-applied-on-warehouses"><h3 >Routes applied on warehouses</h3><p >If you tick <strong >Warehouses</strong>, you have to choose on which warehouse it will
+be applied. The route will be set for all transfer in that warehouse
+that would meet the conditions of the procurement and push rules.</p><img src="../../../_images/use_routes04.png" class="img-responsive center-block"></section><section id="routes-applied-on-products"><h3 >Routes applied on products</h3><p >If you tick <strong >Products</strong>, you have to manually set on which product it
+will be applied.</p><img src="../../../_images/use_routes05.png" class="img-responsive center-block"><p >Open the product on which you want to apply the routes
+(<span class="menuselection">Inventory ‣ Control ‣ Products</span>).
+In the Inventory Tab, select the route(s):</p><img src="../../../_images/use_routes06.png" class="img-responsive center-block"></section><section id="routes-applied-on-product-category"><h3 >Routes applied on Product Category</h3><p >If you tick <strong >Product Categories</strong>, you have to manually set on which
+categories it will be applied.</p><img src="../../../_images/use_routes07.png" class="img-responsive center-block"><p >Open the product on which you want to apply the routes
+(<span class="menuselection">Configuration ‣ Product Categories</span>).
+Select the route(s) under the <strong >Logistics</strong> section :</p><img src="../../../_images/use_routes08.png" class="img-responsive center-block"></section><section id="routes-applied-on-sales-order-lines"><h3 >Routes applied on Sales Order lines</h3><p >If you tick <strong >Sales order lines</strong>, you have to manually set the route
+every time you make a sale order.</p><img src="../../../_images/use_routes09.png" class="img-responsive center-block"><p >In order to make it work, you also have to activate the use of the
+routes on the sales order.</p><p >In the Sales application, go to
+<span class="menuselection">Configuration ‣ Settings</span> and tick
+<strong >Choose specific routes on sales order lines (advanced)</strong>.</p><img src="../../../_images/use_routes10.png" class="img-responsive center-block"><p >You can now choose the routes for each lines of your sales orders:</p><img src="../../../_images/use_routes11.png" class="img-responsive center-block"></section><section id="procurement-and-push-rules"><h2 >Procurement and push rules</h2><p >Please refer to the documents:</p><ul ><li ><a href="procurement_rule.html" class="internal reference"><em >What is a procurement rule?</em></a></li><li ><a href="push_rule.html" class="internal reference"><em >What is a push rule?</em></a></li></ul></section><section id="procurement-configuration"><h2 >Procurement configuration</h2><p >When doing a procurement request, you can force the route you want to
+use. On the product (<span class="menuselection">Inventory Control ‣ Products</span>),
+click on <strong >Procurement Request</strong>. Choose the route you want to use next to
+<strong >Preferred Routes</strong>:</p><img src="../../../_images/use_routes12.png" class="img-responsive center-block"></section><section id="make-to-order-route"><h2 >Make-to-Order Route</h2><p >If you work with no stock, or with minimum stock rules, it is better to
+use the <strong >Make To Order</strong> route. Combine it with the route <strong >Buy</strong> or
+<strong >Manufacture</strong> and it will trigger automatically the purchase order or
+the Manufacturing Order when your products are out-of-stock.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="push_rule.html" class="internal alert-link reference"><em >What is a push rule?</em></a></li><li ><a href="inter_warehouse.html" class="internal alert-link reference"><em >How to do inter-warehouses transfers?</em></a></li><li ><a href="cross_dock.html" class="internal alert-link reference"><em >How to organize a cross-dock in your warehouse?</em></a></li></ul></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>
