@@ -1,13 +1,12 @@
 :banner: banners/start.jpg
 
-============
-Base Setting
-============
+===============
+Pengenalan Umum
+===============
 
 .. toctree::
    :titlesonly:
 
    base/overview
-   base/product
-   base/partner
+   
   

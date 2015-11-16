@@ -1,8 +1,8 @@
 :banner: banners/accounting.jpg
 
-==========
-Accounting
-==========
+====================
+Finance & Accounting
+====================
 
 .. toctree::
    :titlesonly:

@@ -1,0 +1,140 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Tampilan &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Main Concepts" href="../main_concepts.html" />
+    <link rel="next" title="Getting Started" href="../getting_started.html" />
+    <link rel="prev" title="Main Concepts" href="../main_concepts.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../base.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              Tampilan
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Aplikasi</a><ul class="current dropdown-menu"><li class="current toctree-l2"><a href="../../../base.html" class="internal reference">Pengenalan Umum</a></li><li class="toctree-l2"><a href="../../../accounting.html" class="internal reference">Finance &amp; Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../sales.html" class="internal reference">Sales</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">HRM</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#tampilan-umum" class="ripple internal reference">Tampilan Umum</a></li><li class="list-group-item"><a href="#tampilan-form" class="ripple internal reference">Tampilan Form</a></li><li class="list-group-item"><a href="#tampilan-list" class="ripple internal reference">Tampilan List</a></li><li class="list-group-item"><a href="#tampilan-calendar" class="ripple internal reference">Tampilan Calendar</a></li><li class="list-group-item"><a href="#tampilan-grafik" class="ripple internal reference">Tampilan Grafik</a></li><li class="list-group-item"><a href="#tampilan-kanban" class="ripple internal reference">Tampilan Kanban</a></li><li class="list-group-item"><a href="#tampilan-gantt-chart" class="ripple internal reference">Tampilan Gantt Chart</a></li><li class="list-group-item"><a href="#tampilan-search" class="ripple internal reference">Tampilan Search</a></li><li class="list-group-item"><a href="#filter" class="ripple internal reference">Filter</a></li><li class="list-group-item"><a href="#group-by" class="ripple internal reference">Group By</a></li><li class="list-group-item"><a href="#advance-search" class="ripple internal reference">Advance Search</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/base/overview/main_concepts/tampilan.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="tampilan"></section><section id="tampilan-umum"><h2 >Tampilan Umum</h2><p >Setelah user berhasil login ke dalam sistem, maka tampilan pertama kali yang akan muncul seperti gambar di bawah ini :</p><img src="../../../_images/tampilan_umum.png" class="img-responsive"><dl ><dt >Keterangan :</dt><dd ><ol ><li >Menu Utama, yang merupakan pembagian fungsi secara umum sesuai dengan kategori pekerjaan. Menu utama ini merupakan pintu masuk untuk melakukan kegiatan berikutnya.</li><li >Search bar , yang merupakan area untuk melakukan pencarian sesuai yang relevan dengan fungsi dan akses dari seorang user.</li><li >Pesan Umum, yang digunakan untuk mengirimkan pesan dan membaca pesan.</li><li >Nama dan Foto, merupakan keterangan pengguna yang sedang login</li><li >Sub Menu, merupakan turunan dari Menu Utama</li><li >Working Area, tempat user bekerja dalam sistem.</li></ol></dd></dl></section><section id="tampilan-form"><h2 >Tampilan Form</h2><p >Tampilan form digunakan untuk menampilkan data secara detail.
+seperti layaknya form pada kertas, tampilan ini digunakan untuk melakukan kegiatan
+dengan mengisi data-data yang diperlukan dalam 1 dokumen pekerjaan.</p><img src="../../../_images/form.png" class="img-responsive"></section><section id="tampilan-list"><h2 >Tampilan List</h2><p >Tampilan List (baris), digunakan untuk melihat keseluruhan data secara urutan. Pengguna bisa mengurutkan data sesuai dengan parameter yang diinginkan dengan mengklik parameter pada judul tampilan baris.</p><img src="../../../_images/list_view.png" class="img-responsive"></section><section id="tampilan-calendar"><h2 >Tampilan Calendar</h2><p >Calendar View, untuk menampilkan data dalam bentuk kalender</p><img src="../../../_images/calendar.png" class="img-responsive"></section><section id="tampilan-grafik"><h2 >Tampilan Grafik</h2><p >untuk menampilkan data dalam bentuk Grafik</p><img src="../../../_images/graph.png" class="img-responsive"></section><section id="tampilan-kanban"><h2 >Tampilan Kanban</h2><p >untuk menampilkan data dalam bentuk Kanban</p><img src="../../../_images/kanban.png" class="img-responsive"></section><section id="tampilan-gantt-chart"><h2 >Tampilan Gantt Chart</h2><p >untuk menampilkan data dalam bentuk Grafik Gantt</p><img src="../../../_images/gantt.png" class="img-responsive"></section><section id="tampilan-search"><h2 >Tampilan Search</h2><p >Selain mempunyai beberapa jenis view, Odoo 8 juga dilengkapi dengan fasilitas grouping dan filter yang terdapat pada search bar untuk mempermudah user dalam menganalisa data yang diinginkan.</p><blockquote ><ol ><li >Filter.Fungsi Filter digunakan untuk menampilkan data yang diinginkan saja, sesuai dengan kategori yang dipilih.</li><li >Group By. Fungsi Group By digunakan untuk menampilkan seluruh data namun dikelompokan berdasarkan kategori yang dipilih</li><li >Custom Filter. Berfungsi sama dengan Filter, Custom Filter menampilkan data sesuai dengan kategori yang kita inginkan, sementara fungsi Filter pada point 1, kategorinya sudah ditentukan oleh sistem.</li><li >Advance Search. Fitur ini berfungsi untuk melakukan pencarian data dengan beberapa kategori yang diinginkan.</li></ol></blockquote><p >Untuk melakukan filtering dan grouping dapat dilihat pada gambar berikut.</p><img src="../../../_images/search.png" class="img-responsive"></section><section id="filter"><h2 >Filter</h2><p >Masukkan kriteria pencarian ke dalam kotak pencarian selalu melakukan filter cepat .
+Beberapa dokumen telah didefinisikan Filter untuk menyaring data secara efektif .
+Seperti mencari untuk semua produk yang bisa dijual akan sulit untuk diturunkan dengan menggunakan filter muka . Semua kriteria pencarian dasar yang dapat didefinisikan
+sebagai filter selama pengembangan dan kita dapat menggunakan cepat dari pencarian sebelumnya .
+Untuk mendapatkan pencarian muka ,
+klik panah bawah pada kotak pencarian muncul di sisi kanan .
+Pada klik yang Anda akan dapat melihat semua filter muka mungkin tersedia untuk produk .</p><img src="../../../_images/search-advance.png" class="img-responsive"></section><section id="group-by"><h2 >Group By</h2><p >Data dapat dikelompokkan dalam List , Kanban , atau Grup Views . Dalam pandangan Daftar Anda dapat memiliki fleksibilitas untuk memiliki tingkat terbatas pengelompokan sementara pandangan lain ada keterbatasan dengan pengelompokan . Pengelompokan diterapkan berdasarkan serangkaian klik dilakukan pada pilihan grup .
+Seperti antara dua kelompok pilihan Kategori dan Default Satuan Ukur Jenis tersedia tetapi akan berlaku pertama tergantung pada apa yang Anda pilih pertama</p><ul ><li >Produk berdasarkan Kategori dan Default Unit Ukur Jenis - Jika Anda memilih pertama Kategori dan kemudian Standar Satuan Ukur Jenis</li><li >Produk dengan default Unit Ukur Jenis dan Kategori - Jika Anda memilih Satuan default pertama Ukur Jenis dan kemudian Kategori</li></ul><img src="../../../_images/product-search-group.png" class="img-responsive"><p >Dari gambar di atas &quot; Apply Filter dan Grup &quot; Anda dapat memahami bahwa kita memiliki memilih semua Produk Stock - bisa yang dapat dijual di Group by Kategori .</p></section><section id="advance-search"><h2 >Advance Search</h2><p >Untuk melakukan pencarian lebih maju yang tidak tersedia dengan Pencarian Cepat atau Filter seperti pilih produk yang dijual harga di antara 50 sampai 500. Kita bisa melakukan semacam ini pencarian dengan pencarian muka dan menyelamatkan mereka menggunakan bintang pilihan pencarian muka . Ketika bekerja dengan pencarian muka kita dapat mendefinisikan operator dan kondisi pencarian antara dua kondisi .
+Jika Anda menambahkan lebih dari satu kondisi dalam pencarian tunggal itu selalu diperlakukan dengan operator OR</p><p >Jadi, Jika Anda ingin menerapkan operator AND saat bekerja dengan Advance Search apply dan lakukan Advance Search kembali.</p><img src="../../../_images/advance-searchs.png" class="img-responsive"></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

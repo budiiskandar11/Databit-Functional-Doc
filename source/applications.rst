@@ -1,6 +1,6 @@
-============
-Applications
-============
+========
+Aplikasi
+========
 
 .. toctree::
    :titlesonly:
