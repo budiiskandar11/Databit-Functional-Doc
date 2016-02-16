@@ -1,19 +1,17 @@
-==========================
-The Accounting behind Odoo
-==========================
+===============
+Accounting Odoo
+===============
 
-This page summarises the way Odoo deals with typical accounts and
-transactions.
+Halaman ini berisi rangkuman mengenai bagaimana Odoo mengatur Akun dan transaksi.
 
 Double-entry bookkeeping
 ========================
 
-Odoo automatically creates all the behind-the-scenes journal entries
-for each of your accounting transactions: customer invoices, point of
-sale order, expenses, inventory moves, etc.
+Odoo secara otomatis akan membuat journal untuk setiap transaksi keuangan, seperti
+penerbitan invoice (AR), penerimaan billing (AP), perpindahan barang, pembayaran dll.
 
-Odoo uses the rules of double-entry bookkeeping system: all journal
-entries are automatically balanced (sum of debits = sum of credits).
+Odoo menggunakan aturan sistem double-entry bookkeeping yang artinya semua journal entries
+akan secara otomatis dibuat balance (jumlah Debit = jumlah Credit).
 
 .. seealso::
 
@@ -22,65 +20,60 @@ entries are automatically balanced (sum of debits = sum of credits).
 Accrual and Cash Basis Methods
 ==============================
 
-Odoo support both accrual and cash basis reporting. This allows you to
-report income / expense at the time transactions occur (i.e., accrual basis), or when
-payment is made or received (i.e., cash basis).
+Odoo mensupport baik accrual basis maupun cash basis. Hal ini memungkinkan pengguna
+untuk melaporkan Expense / Income pada saat transaksi (accrual basis) atau pada saat pembayaran diterima (cash basis)
 
 Multi-companies
 ===============
 
-Odoo allows to manage several companies within the same database. Each
-company has its own chart of accounts and rules. You can get
-consolidation reports following your consolidation rules.
+Odoo memungkinkan untuk mengatur beberapa perusahaan dalam satu database.
+Setiap perusahaan akan mempunyai chart of account sendiri dan aturan sendiri.
+Anda akan mendapatkan laporan konsolidasi sesuai dengan aturan yang ditetapkan.
 
-Users can access several companies but always work in one company at a
-time.
+Pengguna yang diberikan akses dapat mengatur beberapa perusahaan, tetapi hanya bisa bekerja
+pada 1 perusahaan pada saat yang bersamaan.
 
 Multi-currencies
 ================
 
-Every transaction is recorded in the default currency of the
-company. For transactions occurring in another currency, Odoo stores
-both the value in the currency of the company and the value in the
-currency of the transaction. Odoo can generate currencies gains and
-losses after the reconciliation of the journal items.
+Setiap transaksi akan dicatat dalam Mata Uang basis (Functional Currency). Setiap 
+transaksi yang menggunakan mata uang lain, Odoo akan menyimpannya dalam 2 nilai
+yaitu dalam functional currency dan original currency. Odoo dapat menghasilkan 
+laba/rugi kurs setelah ada rekonsiliasi pada journal item.
 
-Currency rates are updated once a day using a yahoo.com online
-web-service.
+Nilai kurs dapat diperbaharui setiap hari menggunakan web-service dari yahoo.com
 
 International Standards
 =======================
 
-Odoo accounting support more than 50 countries. The Odoo core
-accounting implement accounting standards that is common to all
-countries and specific modules exists per country for the
-specificities of the country like the chart of accounts, taxes, or
-bank interfaces.
+Accounting Odoo mensupport lebih dari 50 negara. Dasar Accounting Odoo mengadopsi 
+standar akutansi yang berlaku umum dan tersedia modul spesifik per negara seperti COA, Pajak dan atau Bank interface.
+Databit sebagai Official Odoo Partner, telah membuat modul2 spesifik yang sesuai dengan
+peraturan akutansi di Indonesia.
 
-In particular, Odoo's core accounting engine supports:
+Modul-modul spesifi lain :
 
 * Anglo-Saxon Accounting (U.S., U.K.,, and other English-speaking
-  countries including Ireland, Canada, Australia, and New Zealand)
-  where cost of good sold are reported when products are
-  sold/delivered.
-* European accounting where expenses are accounted at the supplier
-  bill.
-* Storno accounting (Italy) where refund invoices have negative
-  credit/debit instead of a reverting the original journal items.
+  countries including Ireland, Canada, Australia, dan New Zealand)
+  dimana HPP dilaporkan ketika produk dijual atau di kirim.
+* European accounting dimana Expenses diposting ketika loading AP.
+* Storno accounting (Italy) dimana retur mempunyai nilai negatif pada Debit/Credit 
+  dibandingkan dengan membuat journal balik.
 
-Odoo also have modules to comply with IFRS rules.
+Odoo juga mempunyai modul yang sesuai dengan IFRS.
 
 Accounts Receivable & Payable
 =============================
 
-By default, Odoo uses a single account for all account
-receivable entries and one for all accounts payable entries. You can
-create separate accounts per customers/suppliers, but you don't need
-to.
+Secara default, Odoo menggunakan 1 account untuk semua AR dan AP. Pengguna dapat membuat 
+akun AR per masing Customer, atau akun AP per masing2 Supplier, tapi hal ini tidak dibutuhkan, karena 
+Odoo menyediakan laporan AR ato AP per masing2 Customer/Supplier.
 
-As transactions are associated to customers or suppliers, you get
-reports to perform analysis per customer/supplier such as the customer
-statement, revenues per customers, aged receivable/payables, ...
+Setiap transaksi yang berkaitan dengan Customer atau Supplier, dapat ditampilkan dalam laporan 
+per masing-masing customer/supplier tersebut.
+
+Baru sampai sini
+================
 
 Wide range of financial reports
 ===============================

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to setup Odoo Accounting? &mdash; Odoo Business 0.1 documentation</title>
+    <title>Membuat Database dan Lakukan Setting &mdash; Odoo Business 0.1 documentation</title>
     
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -42,7 +42,7 @@
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
     <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
     <link rel="up" title="Getting Started" href="../getting_started.html" />
-    <link rel="next" title="Process overview" href="../process_overview.html" />
+    <link rel="next" title="Finance &amp; Accounting" href="../../../accounting.html" />
     <link rel="prev" title="Getting Started" href="../getting_started.html" /> 
   </head>
   <body role="document"><header class="">
@@ -71,7 +71,7 @@
           </li>
           <li>
             <h1 id="main_title">
-              How to setup Odoo Accounting?
+              Membuat Database dan Lakukan Setting
             </h1>
           </li>
         </nav>
@@ -91,7 +91,7 @@
       
       <aside>
         <div class="navbar-aside text-center">
-          <ul ></ul>
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#login" class="ripple internal reference">Login</a></li><li class="list-group-item"><a href="#membuat-database" class="ripple internal reference">Membuat Database</a></li><li class="list-group-item"><a href="#pilih-chart-of-account" class="ripple internal reference">Pilih Chart of Account</a></li><li class="list-group-item"><a href="#lengkapi-data-perusahaan" class="ripple internal reference">Lengkapi Data Perusahaan</a></li><li class="list-group-item"><a href="#membuat-data-customer" class="ripple internal reference">Membuat Data Customer</a></li><li class="list-group-item"><a href="#membuat-data-supplier" class="ripple internal reference">Membuat Data Supplier</a></li><li class="list-group-item"><a href="#import-data-customer-supplier" class="ripple internal reference">Import Data Customer / Supplier</a></li></ul>
           
           <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/base/overview/getting_started/setup.rst" class="gith-link">
               Edit on GitHub
@@ -103,14 +103,52 @@
       <article class="doc-body ">
         
         
-  <section id="how-to-setup-odoo-accounting"><p >The Odoo Accounting application has an implementation guide that you
-should follow to configure it. It's a step-by-step wizard with links to
-the different screens you will need.</p><p >Once you have <a href="https://www.odoo.com/apps/modules/online/account_accountant/" class="external reference">installed the Accounting
-application</a>,
-you should click on the top-right progressbar to get access to the
-implementation guide.</p><img src="../../../_images/setup011.png" class="img-responsive center-block"><p >The implementation guide will help you through the following steps:</p><ol ><li >Completing your company settings</li><li >Entering in your bank accounts</li><li >Selecting your chart of accounts</li><li >Confirming your usual tax rates</li><li >Setting up any foreign currencies</li><li >Importing your customers</li><li >Importing your suppliers</li><li >Importing your products</li><li >Importing your outstanding transactions</li><li >Importing your starting balances</li><li >Define the users for accounting</li></ol><img src="../../../_images/setup021.png" class="img-responsive center-block"><p >Once a step is done, you can click on the &quot;Mark as Done&quot; button, in the
-bottom of the screen. That way, you can track the progress of your
-overall configuration of Odoo.</p></section>
+  <section id="membuat-database-dan-lakukan-setting"></section><section id="login"><h2 >Login</h2><p >Setelah menginstall Odoo di Server, kita akan memulai membuat sebuah database.</p><img src="../../../_images/login.png" class="img-responsive"></section><section id="membuat-database"><h2 >Membuat Database</h2><div class="highlight-python"><div class="highlight"><pre>klik Manage Database &gt; Create
+</pre></div>
+</div>
+<img src="../../../_images/create_database.png" class="img-responsive"><p >Isi Master Password, Database Name, Load Demo data, and Choose a Database Password lalu click on create button to create a Database.</p><p >Setelah sukses membuat database, install applikasi Accounting pada :</p><div class="highlight-python"><div class="highlight"><pre>Menu &gt; Setting &gt; Local Module &gt; Accounting
+</pre></div>
+</div>
+</section><section id="pilih-chart-of-account"><h2 >Pilih Chart of Account</h2><p >Setelah modul Accounting diinstall, akan mncul tampilan :</p><img src="../../../_images/coa.png" class="img-responsive"><p >klik Apply, lalu akan muncul tampilan :</p><img src="../../../_images/coa_indo.png" class="img-responsive"></section><section id="lengkapi-data-perusahaan"><h2 >Lengkapi Data Perusahaan</h2><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Untuk Pelanggan Odoo-Databit On Demand, Company Setting akan dilakukan oleh Databit Team
+sesuai dengan data yang diterima</p></div><p >Untuk melakukan Company Setting dapat diakses melalui menu :</p><div class="highlight-python"><div class="highlight"><pre>Menu Settings &gt; Companies &gt; Companies atau klik pada logo Odoo disebelah kiri atas
+</pre></div>
+</div>
+<p >maka akan muncul tampilan seperti ini</p><img src="../../../_images/company.png" class="img-responsive"><div class="highlight-python"><div class="highlight"><pre>Keterangan :
+ 1. Isi Nama Perusahaan dan masukan logo pada field image
+ 2. Pada bagian General Information :
+    - isi Nomor NPWP
+    - kode transaksi (diisin dengan 0)
+    - kode status diisi dengan 1, jika merupakan perusahaan umum
+    - isi alamat perusahaan
+    - isi Company Tagline dengan motto perusahaan jika ada
+    - masukan informasi website perusahaan
+    - isi nomor telp, fax, dan email perusahaan
+ 3. Pada Bagian Configuration
+    - isi Currency dengan Mata Uang Dasar Perusahaan dalam hal ini : IDR
+</pre></div>
+</div>
+</section><section id="membuat-data-customer"><h2 >Membuat Data Customer</h2><p >alah satu data yang penting dalam suatu perusahaan ialah Data Customer atau Data Supplier, Oleh karenanya kami menyebutnya
+sebagai Master Data Partner.</p><p >Untuk memasukan atau menambah data Partner, baik Customer maupun Supplier, pengguna dapat melakukannya dengan cara import data
+melalui file .csv atau menambahkan secara manual.</p><p >Untuk menambahkan data secara manual. Berikut langkah yang harus dilakukan :</p><p >ntuk menambah Data Customer dapat diakses melalui Menu :</p><div class="highlight-python"><div class="highlight"><pre>Menu &gt; Accounting &gt; Customer &gt; Customer &gt; klik create
+</pre></div>
+</div>
+<p >atau</p><div class="highlight-python"><div class="highlight"><pre>Menu &gt; Sales &gt; Sales Order &gt; Customer &gt; klik create
+</pre></div>
+</div>
+<p >maka akan muncul tampilan sebagai berikut :</p><img src="../../../_images/customer.png" class="img-responsive"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Klik pada 'Is Company' jika Customer merupakan sebuah perusahaan</p></div><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >Tags, diisi dengan Label yang menjadi ciri dari Customer tersebut, misal : Distributor Makanan, Pelanggan Tetap, dll.
+Setiap Customer dapat memiliki lebih dari 1 Tags.</p></div></section><section id="membuat-data-supplier"><h2 >Membuat Data Supplier</h2><p >Untuk menambah Data Supplier dapat diakses melalui Menu :</p><div class="highlight-python"><div class="highlight"><pre>Menu &gt; Accounting &gt; Supplier &gt; Supplier &gt; klik create
+</pre></div>
+</div>
+<p >atau</p><div class="highlight-python"><div class="highlight"><pre>Menu &gt; Purchase &gt; Purchase Order &gt; Supplier &gt; klik create
+</pre></div>
+</div>
+<p >Cara pengisian dan Tampilan sama dengan pengisian Data Customer.</p></section><section id="import-data-customer-supplier"><h2 >Import Data Customer / Supplier</h2><p >Jika Anda suda memiliki data Customer maupun Data Supplier dalam bentuk file csv, maka Odoo menyediakan fasilitas import.</p><p >Untuk melakukannya, akses Menu :</p><div class="highlight-python"><div class="highlight"><pre>Menu &gt; .. &gt; Supplier &gt; klik list view &gt; klik import
+</pre></div>
+</div>
+<p >atau</p><div class="highlight-python"><div class="highlight"><pre>Menu &gt; .. &gt; Customer &gt; klik list view &gt; klik import
+</pre></div>
+</div>
+<p >maka akan muncul tampilan seperti dibawah :</p><img src="../../../_images/import_customer.png" class="img-responsive"></section>
 
       </article>
     </div>

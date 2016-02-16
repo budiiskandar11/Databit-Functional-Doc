@@ -1,3 +1,16 @@
-===================
-Sales terminologies
-===================
+=================
+Sales Terminologi
+=================
+
+
+**Quotation**
+
+Dokumen resmi perusahaan yang diberikan kepada calon pembeli yang berisikan mengenai produk atau jasa
+dengan jumlah dan harga tertentu yang ditawarkan kepada calon pembeli.
+
+**Sales Order** 
+
+Sales Order adalah dokumen yang digunakan untuk merekam pesanan dari konsumen atau pelanggan. 
+Ketepatan dalam penginputan data dalam dokumen ini berguna untuk 
+memastikan bahwa tidak ada pesanan konsumen yang salah catat, salah antar atau terlambat dikirim.
+
